@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Onsite Car Key
+  site: 'https://onsitecarkey.com'
   base: '/'
   trailingSlash: false
 
@@ -16,7 +16,7 @@ metadata:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Onsite Car Key
     images:
       - url: '~/assets/images/default.png'
         width: 1200
