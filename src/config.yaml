@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Onsite Car Key
+    template: '%s — Onsite Car Key'
+  description: "Louisville's trusted 24/7 automotive locksmith. Professional car key replacement, programming, and emergency lockout services. Licensed, insured, and locally owned. Call now for fast, reliable service!"
   robots:
     index: true
     follow: true
