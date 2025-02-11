@@ -3,14 +3,14 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+//import Features from '~/components/widgets/Features.astro';
+//import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+//import Stats from '~/components/widgets/Stats.astro';
+//import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: '24/7 Car Key Replacement & Locksmith Services Louisville KY | Onsite Car Key',
@@ -30,12 +30,12 @@ const metadata = {
         target: '_self',
         icon: 'tabler:phone',
       },
-      { text: 'Our Services', href: '/services' },
+      { text: 'Our Services', href: '/services', icon: 'tabler:arrow-right' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Professional car key service in Louisville' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Emergency car key service in Louisville' }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight">Car Key Services</span> in Louisville</Fragment>
+      Emergency<span class="text-accent dark:text-white highlight"> Car Key Services</span> in Louisville</Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
@@ -50,7 +50,7 @@ const metadata = {
 
   <!-- Features Widget *************** -->
 
-  <Features
+  <!-- <Features
     id="features"
     tagline="Features"
     title="What you get with AstroWind"
@@ -94,10 +94,10 @@ const metadata = {
       },
     ]}
   />
-
+-->
   <!-- Content Widget **************** -->
 
-  <Content
+  <!--<Content
     isReversed
     tagline="Inside template"
     title="AstroWind's Blueprint: Fun Meets Functionality!"
@@ -132,45 +132,10 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
+-->
 
-  <!-- Content Widget **************** -->
 
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
+  <!-- Content Widget **************** 
 
   <Content
     isReversed
@@ -201,35 +166,35 @@ const metadata = {
       alt: 'Astronauts Image',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">Fast & Professional Car Door Unlocking.</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
+-->
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Get your car up and running in no time with us."
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Contact & Location</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          "Call us at (502) 717-5887 and provide your exact location - including street address, nearby landmarks, or business names. For your safety and faster service, try to be in a well-lit area if it's dark outside.",
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: <span class="font-medium">Vehicle Information</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          "Tell us your vehicle's make, model, and year. This helps us bring the right equipment and keys for your specific car. If possible, check in the driver side door decal.",
+        icon: 'tabler:car',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Service & Verification</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Our licensed technician will arrive promptly, verify your identity and vehicle ownership for security. Then we quickly diagnose and solve your car key or lockout issue.',
+        icon: 'tabler:shield-check',
       },
       {
         title: 'Ready!',
@@ -241,8 +206,44 @@ const metadata = {
       alt: 'Steps image',
     }}
   />
+  <!-- Content Widget **************** -->
 
-  <!-- Features2 Widget ************** -->
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Premium Service Quality',
+        description:
+          'We invest in state-of-the-art key programming equipment and provide premium service that matches the expectations of discerning clients. Our technicians are certified professionals.',
+      },
+      {
+        title: 'Rapid Response Time',
+        description:
+          'Understanding our clients value their time, we maintain a 20-minute average response time throughout Louisville neighborhoods and business districts.',
+      },
+      {
+        title: 'Transparent Pricing',
+        description:
+          'We provide upfront, clear pricing with no hidden fees. Our service reflects the quality and reliability that professional clients expect, with detailed digital invoicing and multiple payment options.',
+      },
+      {
+        title: 'Comprehensive Coverage',
+        description:
+          'Specialized in high-end vehicles and sophisticated key systems, including smart keys and advanced security features for luxury and modern vehicles.',
+      },
+    ]}
+    image={{
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/c_scale,w_80/f_auto/q_auto:eco/v1739292857/onsitekeyduplication_with_multiple_car_keys.png',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">Reliable locksmith in Louisville.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  <!-- Features2 Widget ************** 
 
   <Features2
     title="Most used widgets"
@@ -305,7 +306,7 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
-
+-->
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
@@ -319,45 +320,45 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
+  title="Frequently Asked Questions"
+  subtitle="Common questions about our automotive locksmith services in Louisville, Kentucky"
+  tagline="FAQs"
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: 'How quickly can you get to my location?',
+      description:
+        "We typically arrive within 20-30 minutes in the Louisville metro area. Response times may vary based on your location and current service demand. We'll provide an estimated arrival time when you call.",
+    },
+    {
+      title: 'What forms of payment do you accept?',
+      description:
+        'We accept all major credit cards, cash, and digital payments including Apple Pay and Google Pay. Payment is required upon service completion. We provide detailed receipts for all transactions.',
+    },
+    {
+      title: 'Do you make keys for all car brands?',
+      description:
+        "Yes, we can make keys for virtually all vehicle makes and models, including domestic and foreign cars. We have the latest key cutting and programming equipment to handle modern transponder keys, key fobs, and smart keys.",
+    },
+    {
+      title: 'How much does it cost to replace a car key?',
+      description:
+        "Key replacement costs vary depending on your vehicle's make, model, and year, as well as the type of key needed. Basic keys start at $140, while key fobs or sophisticated smart keys may cost more. We'll provide an exact quote over the phone.",
+    },
+    {
+      title: 'Are you licensed and insured?',
+      description:
+        "Yes, we are fully licensed, bonded, and insured in Kentucky. Our technicians are professionally trained and certified. We maintain comprehensive insurance coverage for your peace of mind.",
+    },
+    {
+      title: 'What information do I need to provide for service?',
+      description:
+        "You'll need to provide your vehicle's make, model, year, and your location. For key cutting and programming, we'll need proof of vehicle ownership and your valid ID for security purposes.",
+    },
+  ]}
+/>
 
-  <!-- Stats Widget ****************** -->
+  <!-- Stats Widget ****************** 
 
   <Stats
     stats={[
@@ -366,9 +367,9 @@ const metadata = {
       { title: 'Forks', amount: '10.3K' },
       { title: 'Users', amount: '48.4K' },
     ]}
-  />
+  />-->
 
-  <!-- CallToAction Widget *********** -->
+  <!-- CallToAction Widget *********** 
 
   <CallToAction
     actions={[
@@ -389,5 +390,5 @@ const metadata = {
       Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
       waste more time! :P
     </Fragment>
-  </CallToAction>
+  </CallToAction>-->
 </Layout>
