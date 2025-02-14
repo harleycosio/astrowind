@@ -29,11 +29,11 @@ export const headerData = {
       links: [
         {
           text: 'Smart Keys',
-          href: getPermalink('/services'),
+          href: getPermalink('/smart-keys'),
         },
         {
           text: 'Car Unlocking',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/car-unlocking'),
         },
         {
           text: 'Ignition Repair',

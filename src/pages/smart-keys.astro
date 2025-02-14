@@ -1,0 +1,88 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Smart Car Key Programming & Replacement Services Louisville KY',
+  description: 'Expert smart car key programming and replacement in Louisville. OEM-quality key fobs, transponder programming, and 24/7 mobile service.',
+  openGraph: {
+    title: 'Smart Car Key Solutions | Louisville Automotive Locksmith',
+    description: 'Professional smart key programming and replacement services. Available 24/7 for all vehicle makes and models in Louisville.',
+    image: '~/assets/images/jeep-smart-key.jpg',
+    type: 'website'
+  }
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Smart Key Services"
+    title="Expert Smart Car Key Solutions"
+    subtitle="Professional programming and replacement for all modern vehicle smart keys. Factory-level equipment and OEM-quality parts for perfect compatibility."
+    actions={[
+      { 
+        variant: 'primary',
+        text: 'Call (502) 717-5887',
+        href: 'tel:5027175887',
+      }
+    ]}
+    image={{
+      src: '~/assets/images/jeep-smart-key.jpg',
+      alt: 'Smart key programming service in Louisville'
+    }}
+  />
+
+  <Features2
+    title="Smart Key Solutions"
+    subtitle="Complete smart key and key fob services for modern vehicles"
+    columns={3}
+    items={[
+      {
+        title: 'Smart Key Programming',
+        description: 'Factory-level programming for proximity keys and smart fobs. Compatible with all major vehicle brands including Toyota, Honda, Ford, GM, Chrysler/Dodge, etc.',
+        icon: 'tabler:cpu'
+      },
+      {
+        title: 'Push-to-Start Keys',
+        description: 'Expert replacement and programming for push-to-start button vehicles. Full testing and verification of all smart key functions.',
+        icon: 'tabler:car'
+      },
+      {
+        title: 'Key Fob Repair',
+        description: 'Professional diagnostics and repair of malfunctioning smart key fobs. Battery replacement and button repair services available.',
+        icon: 'tabler:tool'
+      }
+    ]}
+  />
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'OEM Quality',
+        description: 'Original equipment manufacturer quality parts and programming. Ensures perfect compatibility with your vehicle\'s security system.',
+        icon: 'tabler:certificate'
+      },
+      {
+        title: 'Advanced Equipment',
+        description: 'Latest diagnostic and programming tools to handle modern vehicle security systems and smart keys.',
+        icon: 'tabler:device-laptop'
+      },
+      {
+        title: 'Warranty Protection',
+        description: 'All smart key services backed by our satisfaction guarantee. Full warranty on parts and programming.',
+        icon: 'tabler:shield'
+      },
+    ]}
+    image={{
+      src: '~/assets/images/couple-in-car-dealership.jpg',
+      alt: 'Professional smart key programming equipment'
+    }}
+  >
+    <Fragment slot="content">
+      Professional Smart Key Programming
+    </Fragment>
+  </Content>
+</Layout>

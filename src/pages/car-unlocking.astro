@@ -1,0 +1,249 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Car Unlocking Service Pricing | Onsite Car Key',
+  description:
+    'Transparent pricing for professional car unlocking services. 24/7 emergency service available with competitive rates and rapid response times.',
+  openGraph: {
+    title: 'Professional Car Unlocking Service with Lishi Tools in Louisville KY',
+    description:
+      'Fast, damage-free car unlocking using Lishi tools. Transparent pricing, 24/7 emergency service, and licensed technicians. Call (502) 717-5887 for immediate assistance.',
+    type: 'service',
+    url: 'https://onsitecarkey.com/car-unlocking', // Replace with your actual URL
+    image: '~/assets/images/my-car-key-hero.jpg', // Replace with your actual image URL
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Pricing"
+    title="Clear Car Unlocking Service Rates"
+    subtitle="Professional automotive locksmith services with clear, upfront pricing. No hidden fees."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Service Rates"
+    subtitle="Professional car unlocking services for every situation"
+    prices={[
+      {
+        title: 'Standard Service',
+        subtitle: 'Within City Limits',
+        price: 100,
+        period: 'Starting at',
+        items: [
+          {
+            description: 'Available 7:00 AM - 8:00 PM',
+          },
+          {
+            description: 'Within city limits',
+          },
+          {
+            description: 'Rapid response time',
+          },
+          {
+            description: 'Professional tools',
+          },
+          {
+            description: 'Licensed technician',
+          },
+        ],
+        callToAction: {
+          target: '_self',
+          text: 'Call Now',
+          href: 'tel:5027175887',
+        },
+      },
+      {
+        title: 'After Hours',
+        subtitle: 'Emergency Service',
+        price: 150,
+        period: 'Starting at',
+        items: [
+          {
+            description: '8:00 PM - 6:59 AM service',
+          },
+          {
+            description: 'Weekend availability',
+          },
+          {
+            description: 'Holiday service',
+          },
+          {
+            description: 'Priority response',
+          },
+          {
+            description: '24/7 availability',
+          },
+        ],
+        callToAction: {
+          target: '_self',
+          text: 'Emergency Service',
+          href: 'tel:5027175887',
+        },
+        hasRibbon: true,
+        ribbonTitle: '24/7',
+      },
+      {
+        title: 'Extended Range',
+        subtitle: 'Outside City Limits',
+        price: '2/mile',
+        period: 'Starting at',
+        items: [
+          {
+            description: '30+ miles from city center',
+          },
+          {
+            description: 'Surrounding counties',
+          },
+          {
+            description: 'Standard price + mileage',
+          },
+          {
+            description: 'Distance surcharge applies',
+          },
+          {
+            description: 'Call for exact quote',
+          },
+        ],
+        callToAction: {
+          target: '_self',
+          text: 'Get a Quote',
+          href: 'tel:5027175887',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Why Choose Us?"
+    subtitle="Professional, reliable, and affordable car unlocking services"
+    columns={2}
+    items={[
+      {
+        title: '24/7 Availability',
+        description: 'We are available around the clock to assist you with any car lockout situation.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Transparent Pricing',
+        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
+        icon: 'tabler:flip-vertical',
+      },
+      {
+        title: 'Rapid Response',
+        description: 'Our technicians arrive quickly to get you back on the road as soon as possible.',
+        icon: 'tabler:truck',
+      },
+      {
+        title: 'Licensed Professionals',
+        description: 'Our team consists of licensed and experienced locksmiths.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Spare Key Savings',
+        description:
+          'Save up to 20% on a spare key when you choose our unlocking service. Prevent future lockouts with a backup key made by professionals.',
+        icon: 'tabler:key-off',
+      },
+      {
+        title: 'Free Gift with Service',
+        description: 'Receive a complimentary keychain or key accessory with every car unlocking service. Our way of thanking you for choosing us.',
+        icon: 'tabler:gift',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Easy Steps to Get Unlocked"
+    tagline="simplified process"
+    isReversed={true}
+    items={[
+      {
+        title: 'Call Us',
+        description: 'Contact us at (502) 717-5887 to request service.',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Provide Location',
+        description: 'Tell us your exact location so we can dispatch a technician.',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Get a Quote',
+        description: 'We provide a clear, upfront quote with no hidden fees.',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Get Unlocked',
+        description: 'Our technician will arrive and unlock your car quickly and safely.',
+        icon: 'tabler:number-4',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/my-car-key-hero.jpg',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Pricing FAQs"
+    subtitle="Common questions about our car unlocking service pricing."
+    columns={1}
+    items={[
+      {
+        title: 'What does "starting at" mean?',
+        description:
+          'Our prices start at the listed amount and may vary based on your specific location, vehicle type, and service complexity. We provide a clear quote before starting any work.',
+      },
+      {
+        title: 'How is the extended range fee calculated?',
+        description:
+          'For locations more than 30 miles from our base, we add $2 per mile to the base service fee (Standard or After Hours). We will confirm the exact mileage and total cost when you call.',
+      },
+      {
+        title: 'Are there any hidden fees?',
+        description:
+          'No, we believe in transparent pricing. The quote we provide is the total cost you will pay, with no surprise charges.',
+      },
+      {
+        title: 'What is your cancellation policy?',
+        description:
+          'We understand that plans can change. You can cancel your service request without charge if you notify us at least 15 minutes before the scheduled arrival time. Cancellations made with less than 15 minutes notice may be subject to a $50 cancellation fee to cover technician dispatch costs.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Need Car Unlocking Service?"
+    subtitle="Contact us now for fast and reliable service."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Call Now',
+        href: 'tel:5027175887',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>
