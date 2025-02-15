@@ -20,6 +20,7 @@ Car lockouts can happen to anyone, regardless of how careful you are. Here's you
 ## First Steps to Take
 
 1. **Stay Calm and Assess the Situation**
+
    - Check all doors and windows
    - Verify if any other entry points are accessible
    - Remember if you have a spare key at home
@@ -32,6 +33,7 @@ Car lockouts can happen to anyone, regardless of how careful you are. Here's you
 ## When to Call a Professional Locksmith
 
 Contact a professional automotive locksmith immediately if:
+
 - You're in an unsafe or unfamiliar area
 - It's late at night or bad weather
 - Your vehicle has advanced security features
@@ -47,11 +49,13 @@ Contact a professional automotive locksmith immediately if:
 ## Prevention Tips
 
 1. **Keep Spare Keys**
+
    - Have a spare key at home
    - Consider a magnetic key holder
    - Share a spare with trusted family members
 
 2. **Use Technology Wisely**
+
    - Install a key finder app
    - Consider smart key solutions
    - Keep emergency contact numbers saved
@@ -64,6 +68,7 @@ Contact a professional automotive locksmith immediately if:
 ## How a Professional Locksmith Helps
 
 A certified automotive locksmith will:
+
 - Arrive quickly with proper identification
 - Use specialized tools to prevent damage
 - Verify vehicle ownership before service
@@ -73,6 +78,7 @@ A certified automotive locksmith will:
 ## Cost Considerations
 
 Professional locksmith services typically cost between $50-$200 depending on:
+
 - Time of day
 - Vehicle make and model
 - Type of key system
@@ -81,6 +87,7 @@ Professional locksmith services typically cost between $50-$200 depending on:
 ## Emergency Preparation
 
 Keep these items accessible:
+
 - Locksmith contact information
 - Insurance company details
 - Vehicle registration
@@ -90,6 +97,7 @@ Keep these items accessible:
 ## When to Call Insurance
 
 Many insurance policies include roadside assistance. Check if your policy covers:
+
 - Lockout services
 - Emergency key replacement
 - Towing if necessary
@@ -98,6 +106,7 @@ Many insurance policies include roadside assistance. Check if your policy covers
 ## Professional Advice
 
 Our experienced locksmiths recommend:
+
 1. Save multiple emergency contacts
 2. Keep basic tools in your purse/wallet
 3. Consider a spare key service subscription

@@ -5,7 +5,7 @@ export const headerData = {
     {
       text: 'Home',
       href: getPermalink('/'),
-     /* links: [
+      /* links: [
         {
           text: 'SaaS',
           href: getPermalink('/homes/saas'),
@@ -56,7 +56,7 @@ export const headerData = {
     {
       text: 'Contact',
       href: getPermalink('/contact'),
-    }, 
+    },
     {
       text: 'About us',
       href: getPermalink('/about'),
@@ -64,20 +64,17 @@ export const headerData = {
     {
       text: 'Blog',
       href: getBlogPermalink(),
-
     },
   ],
-
 };
 
 export const footerData = {
-
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Reddit', icon: 'tabler:brand-reddit', href: 'https://reddit.com/r/onsitecarkey' },   
+    { ariaLabel: 'Reddit', icon: 'tabler:brand-reddit', href: 'https://reddit.com/r/onsitecarkey' },
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://twitter.com/onsitecarkey' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/onsitecarkey' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://m.me/onsitecarkey' },

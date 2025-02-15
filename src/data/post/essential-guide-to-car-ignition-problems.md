@@ -18,6 +18,7 @@ Understanding when you need professional ignition services can save you time, mo
 ## Common Ignition Problems
 
 ### Warning Signs
+
 - Key won't turn in ignition
 - Steering wheel locked
 - Grinding noise when starting
@@ -28,6 +29,7 @@ Understanding when you need professional ignition services can save you time, mo
 ## When to Call a Professional
 
 Immediate professional help is needed when:
+
 - Key breaks inside ignition
 - Ignition cylinder is spinning freely
 - Car won't start after multiple attempts
@@ -37,20 +39,26 @@ Immediate professional help is needed when:
 ## Professional Ignition Services
 
 ### 1. Key Extraction
+
 Our technicians can safely remove:
+
 - Broken keys from ignition
 - Stuck keys without damage
 - Foreign objects in ignition cylinder
 
 ### 2. Ignition Repair
+
 We diagnose and fix:
+
 - Worn ignition cylinders
 - Electrical connection issues
 - Starter problems
 - Steering column locks
 
 ### 3. Complete Replacement
+
 Sometimes necessary when:
+
 - Cylinder is severely damaged
 - Multiple keys have broken inside
 - Security features are compromised
@@ -59,6 +67,7 @@ Sometimes necessary when:
 ## Cost Considerations
 
 Pricing varies based on:
+
 - Vehicle make and model
 - Service complexity
 - Parts required
@@ -66,6 +75,7 @@ Pricing varies based on:
 - Location
 
 ### Average Price Ranges
+
 - Key Extraction: $50-$150
 - Ignition Repair: $125-$275
 - Full Replacement: $200-$600
@@ -73,6 +83,7 @@ Pricing varies based on:
 ## Preventive Measures
 
 1. **Regular Maintenance**
+
    - Keep ignition cylinder clean
    - Use proper key care techniques
    - Address issues early
@@ -86,6 +97,7 @@ Pricing varies based on:
 ## Emergency Tips
 
 If your key is stuck:
+
 1. Ensure the car is in "Park"
 2. Check if steering wheel is locked
 3. Don't force the key
@@ -95,6 +107,7 @@ If your key is stuck:
 ## What to Have Ready
 
 When calling for service, know your:
+
 - Vehicle make, model, and year
 - VIN number
 - Current location
@@ -104,6 +117,7 @@ When calling for service, know your:
 ## Professional vs. DIY
 
 We recommend professional service because:
+
 - Proper tools and expertise
 - Warranty protection
 - Insurance coverage
@@ -113,6 +127,7 @@ We recommend professional service because:
 ## Quality Guarantee
 
 Our ignition services include:
+
 - Certified technicians
 - OEM parts when available
 - Service warranty
