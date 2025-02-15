@@ -1,0 +1,87 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'All Keys Lost Service | Car Locksmith Solutions',
+  description:
+    'Professional solutions when all car keys are lost. Expert key replacement and programming in Louisville, KY.',
+  openGraph: {
+    title: 'All Keys Lost Service - Professional Car Key Replacement',
+    description: 'Expert solutions for vehicles with all keys lost. Fast, professional service in Louisville KY.',
+    type: 'website',
+    url: 'https://onsitecarkey.com/services/all-keys-lost',
+    image: 'https://onsitecarkey.com/assets/images/all-keys-lost.jpg',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+    <h1
+      class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading text-center text-gray-900 dark:text-white"
+    >
+      All Keys Lost: <span class="text-blue-600 dark:text-blue-400">Professional Solutions</span>
+    </h1>
+
+    <div class="flex flex-col gap-8">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+        <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">What Does "All Keys Lost" Mean?</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          "All keys lost" refers to a situation where a vehicle owner has lost all available keys and fobs for their
+          vehicle, leaving them with no way to access or start their car. This is considered more complex than losing
+          just one key because it requires complete key reprogramming.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-red-600">
+        <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Why Is This Situation Different?</h2>
+        <ul class="list-none space-y-3">
+          {
+            [
+              'Requires complete key reprogramming',
+              'May need vehicle computer reset',
+              'Often more expensive than replacing a single key',
+              'Some vehicles requring minimum two keys to program',
+              'Requires professional locksmith system access tools',
+            ].map((item) => (
+              <li class="flex items-center text-gray-700 dark:text-gray-300">
+                <span class="text-red-600 mr-2">⚠</span>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-yellow-600">
+        <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Prevention Tips</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Always keep a spare key in a safe place and consider getting duplicate keys made before losing all keys. This
+          can save significant time and money in the long run.
+        </p>
+        <div class="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
+          <p class="text-yellow-800 dark:text-yellow-200 text-sm">
+            💡 Pro Tip: We recommend having at least two spare keys for modern vehicles with electronic systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Call (502) 717-5887',
+        href: 'tel:5027175887',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Lost All Your Car Keys? </Fragment>
+
+    <Fragment slot="subtitle">
+      Don't worry - we're here to help! Our professional technicians can create and program new keys for your vehicle.
+      Available 24/7 in Louisville and surrounding areas.
+    </Fragment>
+  </CallToAction>
+</Layout>

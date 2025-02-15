@@ -1,0 +1,198 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+
+//import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Mobile App Homepage',
+};
+---
+
+<Layout metadata={metadata}>
+
+
+  <!-- Hero2 Widget ******************* 
+
+  <Hero2
+    
+    image={{
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/c_thumb,w_200,g_face/v1739292820/pexels-nic-scrollstoppingphotos-28119421_llmtey.jpg',
+      alt: 'Car ignition repair service',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">Ignition Repair</span>
+      <br />
+      <span class="hidden xl:inline"> & Replacement</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Fast, reliable, and affordable solutions for all vehicle makes and models. Serving Louisville, KY and surrounding areas.
+      </span>
+    </Fragment>
+  </Hero2>-->
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    id="features"
+    title="Why Choose Our Ignition Services?"
+    subtitle="Expert solutions for all your car ignition needs"
+    columns={2}
+    items={[
+      {
+        title: 'Expert Technicians',
+        description: 'Our certified technicians have the expertise to handle all types of ignition issues.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Advanced Equipment',
+        description: 'We use state-of-the-art tools and equipment to ensure precise and efficient repairs.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Fast Response',
+        description: 'We offer quick response times to get you back on the road as soon as possible.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Affordable Pricing',
+        description: 'Competitive rates with no hidden fees. We provide clear quotes before starting any work.',
+        icon: 'tabler:cash',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ignition-repair-job-chevy.png', // Replace with your actual image URL
+      alt: 'Ignition repair job',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Comprehensive Ignition Services',
+        description: 'We offer a full range of ignition services, including repair, replacement, and key extraction.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'All Makes and Models',
+        description: 'Our services are compatible with all vehicle makes and models, including luxury and high-end cars.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Mobile Service',
+        description: 'We come to you! Our mobile service covers Louisville and surrounding areas.',
+        icon: 'tabler:truck',
+      },
+    ]}
+    image={{
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/c_thumb,w_200,g_face/v1739292820/pexels-nic-scrollstoppingphotos-28119421_llmtey.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ignition Services</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Stats Widget ****************** 
+
+  <Stats
+    title="Statistics of our app"
+    stats={[
+      { amount: '20K', icon: 'tabler:download' },
+      { amount: '18.5K', icon: 'tabler:users' },
+      { amount: '4.7', icon: 'tabler:user-star' },
+    ]}
+  />-->
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="What Our Customers Say?"
+    testimonials={[
+      {
+        testimonial: `Quick and professional service. They fixed my ignition issue in no time and at a reasonable price. Highly recommended!`,
+        name: 'Cary Kennedy',
+        job: 'Satisfied Customer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Cary Kennedy Image',
+        },
+      },
+      {
+        testimonial: `Highly recommend Onsite Car Key for any ignition problems. Their technicians are knowledgeable and friendly.`,
+        name: 'Josh Wilkinson',
+        job: 'Happy Customer',
+        image: {
+          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Josh Wilkinson Image',
+        },
+      },
+      {
+        testimonial:
+          'Excellent service! They replaced my car ignition quickly and efficiently. Great customer service. Will definitely use them again.',
+        name: 'Sidney Hansen',
+        job: 'Decorator',
+        image: {
+          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Sidney Hansen Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'What types of ignition issues do you repair?',
+        description: 'We repair a wide range of ignition issues, including broken keys, worn-out ignition cylinders, and electrical problems.',
+      },
+      {
+        title: 'Do you offer mobile ignition repair services?',
+        description: 'Yes, we offer mobile ignition repair services throughout Louisville and surrounding areas. We come to your location to perform the repair.',
+      },
+      {
+        title: 'How long does an ignition repair take?',
+        description: 'The time required for an ignition repair depends on the complexity of the issue. Most repairs can be completed within an hour.',
+      },
+      {
+        title: 'What is the cost of ignition repair?',
+        description: 'The cost of ignition repair varies based on the specific issue and vehicle make and model. We provide clear quotes before starting any work.',
+      },
+      {
+        title: 'Do you offer a warranty on your ignition repair services?',
+        description: 'Yes, we offer a warranty on all our ignition repair services. Please contact us for more details.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="Need Ignition Repair or Replacement?"
+    subtitle="Contact us today for fast, reliable, and professional ignition repair and replacement services in Louisville, KY and surrounding areas."
+  />
+</Layout>

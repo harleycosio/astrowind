@@ -1,0 +1,126 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Car Locksmith Services | Onsite Car Key',
+  description:
+    'Explore our comprehensive car locksmith services including smart keys, car unlocking, ignition replacement/repair, key duplication, key extraction, and all keys lost situations. Serving Louisville, KY and surrounding areas.',
+  openGraph: {
+    title: 'Car Locksmith Services | Onsite Car Key',
+    description:
+      'Explore our comprehensive car locksmith services including smart keys, car unlocking, ignition replacement/repair, key duplication, key extraction, and all keys lost situations. Serving Louisville, KY and surrounding areas.',
+    type: 'website',
+    url: 'https://onsitecarkey.com/services', // Replace with your actual URL
+    image: 'https://onsitecarkey.com/assets/images/car-locksmith-services.jpg', // Replace with your actual image URL
+  },
+};
+---
+
+<Layout metadata={metadata}>
+
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our Car Locksmith Services"
+    subtitle="We offer a wide range of automotive locksmith services to meet your needs."
+    image={{
+        src: '~/assets/images/car-locksmith-services.jpg',
+        alt: 'Car locksmith services',
+      }}
+    items={[
+      {
+        title: 'Smart Key Programming',
+        description:
+          'Advanced programming for modern vehicle smart keys and key fobs. Compatible with all major car brands.',
+        icon: 'tabler:cpu',
+        callToAction: {
+          text: 'Learn More',
+          href: '/services/smart-keys',
+        },
+      },
+      {
+        title: 'Car Unlocking',
+        description:
+          'Fast, damage-free car unlocking using professional tools. Available 24/7 for emergency situations.',
+        icon: 'tabler:car',
+        callToAction: {
+          text: 'Learn More',
+          href: '/services/car-unlocking',
+        },
+      },
+      {
+        title: 'Ignition Replacement/Repair',
+        description: 'Expert ignition system repair and replacement services to get you back on the road quickly.',
+        icon: 'tabler:settings',
+        callToAction: {
+          text: 'Learn More',
+          href: '/services/ignition-repair',
+        },
+      },
+      {
+        title: 'Key Duplication',
+        description:
+          'High-precision key cutting services for all vehicle types. OEM-quality materials ensure perfect fit and performance',
+        icon: 'tabler:copy',
+        callToAction: {
+          text: 'Call now',
+          href: 'tel:5027175887',
+        },
+      },
+      {
+        title: 'Key Extraction',
+        description: 'Safe and efficient removal of broken keys from locks and ignitions without causing damage.',
+        icon: 'tabler:key',
+        callToAction: {
+          text: 'Call now',
+          href: 'tel:5027175887',
+        },
+      },
+      {
+        title: 'All Keys Lost Situation',
+        description:
+          'Comprehensive solutions for situations where all keys are lost. We can create new keys and reprogram your vehicle.',
+        icon: 'tabler:alert-triangle',
+        callToAction: {
+          text: 'Learn More',
+          href: '/services/all-keys-lost',
+        },
+      },
+    ]}
+  />
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Explore my insightful articles on my blog"
+    information={`Explore our blog for professional advice on car security, key replacement, and locksmith services. 
+                Find helpful guides, industry insights, and tips from certified automotive locksmiths.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+    <Fragment slot="title">Need Professional Car Locksmith Services?</Fragment>
+
+    <Fragment slot="subtitle">
+      Contact us today for fast, reliable, and professional automotive locksmith services in Louisville, KY and
+      surrounding areas.
+    </Fragment>
+  </CallToAction>
+</Layout>

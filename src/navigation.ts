@@ -29,27 +29,27 @@ export const headerData = {
       links: [
         {
           text: 'Smart Keys',
-          href: getPermalink('/smart-keys'),
+          href: getPermalink('/services/smart-keys'),
         },
         {
           text: 'Car Unlocking',
-          href: getPermalink('/car-unlocking'),
+          href: getPermalink('/services/car-unlocking'),
         },
         {
           text: 'Ignition Repair',
-          href: getPermalink('/about'),
+          href: getPermalink('/services/ignition-repair'),
         },
         {
           text: 'Key Duplication',
-          href: getPermalink('/contact'),
+          //href: getPermalink('/contact'),
         },
         {
           text: 'Key Extraction',
-          href: getPermalink('/terms'),
+          //href: getPermalink('/terms'),
         },
         {
           text: 'All keys lost',
-          href: getPermalink('/privacy'),
+          href: getPermalink('/services/all-keys-lost'),
         },
       ],
     },
