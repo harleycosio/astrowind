@@ -79,6 +79,12 @@ export const footerData = {
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/onsitecarkey' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://m.me/onsitecarkey' },
   ],
+  companyInfo: {
+    name: 'Onsite Car Key LLC',
+    address: 'South Florida',
+    phone: '(305) 555-5887', // Update with actual number
+    email: 'info@onsitecarkey.com',
+  },
   footNote: `
     <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
     Made with <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a>
