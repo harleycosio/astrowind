@@ -20,10 +20,35 @@ const { page, tag } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
 const metadata = {
-  title: `Posts by tag '${tag.title}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
+  title: `Posts by tag '${tag.title}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''} | Auto Locksmith Blog`,
+  description: `Browse our articles tagged with '${tag.title}'. Expert automotive locksmith tips and solutions for South Florida drivers.`,
   robots: {
     index: blogTagRobots?.index,
     follow: blogTagRobots?.follow,
+  },
+  openGraph: {
+    title: `${tag.title} - Auto Locksmith Articles & Tips`,
+    description: `Expert automotive locksmith articles tagged with '${tag.title}'. Professional advice for South Florida drivers in Miami-Dade, Broward, and Palm Beach counties.`,
+    type: 'website',
+    url: `https://onsitecarkey.com/blog/tag/${tag.slug}${currentPage > 1 ? `/page/${currentPage}` : ''}`,
+    image: {
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739594496/og_image',
+      alt: `Articles tagged with ${tag.title} - Auto Locksmith Tips`,
+      width: 1200,
+      height: 630,
+    },
+    site_name: 'Onsite Car Key',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@onsitecarkey',
+    title: `${tag.title} - Auto Locksmith Tips & Solutions`,
+    description: `Browse our expert articles about ${tag.title}. Professional automotive locksmith advice for South Florida.`,
+    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739594496/og_image',
+  },
+  alternates: {
+    canonical: `https://onsitecarkey.com/blog/tag/${tag.slug}${currentPage > 1 ? `/page/${currentPage}` : ''}`,
   },
 };
 ---

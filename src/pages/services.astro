@@ -6,7 +6,42 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
   title: 'Car Locksmith Services South Florida | Onsite Car Key',
-  description: 'Professional car locksmith services in Miami-Dade, Broward, and Palm Beach counties. Available 24/7.',
+  description:
+    'Professional automotive locksmith services in Miami-Dade, Broward, and Palm Beach counties. Smart key programming, car unlocking, ignition repair, and more. Available 24/7.',
+  canonical: 'https://onsitecarkey.com/services',
+  openGraph: {
+    title: 'Professional Car Locksmith Services South Florida | Onsite Car Key',
+    description:
+      'Expert automotive locksmith services including smart key programming, car unlocking, ignition repair, and key duplication. Available 24/7 throughout South Florida.',
+    type: 'website',
+    url: 'https://onsitecarkey.com/services',
+    image: {
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739594496/og_image',
+      alt: 'Professional car locksmith services in South Florida',
+      width: 1200,
+      height: 630,
+    },
+    site_name: 'Onsite Car Key',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@onsitecarkey',
+    title: 'Car Locksmith Services South Florida | Available 24/7',
+    description:
+      'Professional automotive locksmith services in South Florida. Smart keys, unlocking, ignition repair, and more.',
+    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739594496/og_image',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+    },
+  },
 };
 ---
 

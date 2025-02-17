@@ -24,13 +24,41 @@ const currentPage = page.currentPage ?? 1;
 // const allTags = await findTags();
 
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Auto Locksmith Blog${currentPage > 1 ? ` — Page${currentPage}` : ''} | Onsite Car Key`,
+  description:
+    'Expert automotive locksmith tips, vehicle security guides, and professional advice for car owners in South Florida. Learn about key replacement, lockout solutions, and more.',
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
   },
   openGraph: {
+    title: 'Auto Locksmith Blog - Expert Tips & Solutions | Onsite Car Key',
+    description:
+      'Professional automotive locksmith advice, key replacement guides, and security tips for South Florida drivers. Serving Miami-Dade, Broward, and Palm Beach counties.',
     type: 'blog',
+    url: `https://onsitecarkey.com/blog${currentPage > 1 ? `/page/${currentPage}` : ''}`,
+    image: {
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739594496/og_image',
+      alt: 'Auto Locksmith Tips and Solutions Blog',
+      width: 1200,
+      height: 630,
+    },
+    site_name: 'Onsite Car Key',
+    locale: 'en_US',
+    article: {
+      authors: ['Onsite Car Key'],
+      tags: ['auto locksmith', 'car keys', 'vehicle security', 'lockout solutions', 'South Florida'],
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@onsitecarkey',
+    title: 'Auto Locksmith Tips & Solutions Blog | Onsite Car Key',
+    description: 'Professional automotive locksmith advice and guides for South Florida drivers.',
+    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739594496/og_image',
+  },
+  alternates: {
+    canonical: `https://onsitecarkey.com/blog${currentPage > 1 ? `/page/${currentPage}` : ''}`,
   },
 };
 ---
