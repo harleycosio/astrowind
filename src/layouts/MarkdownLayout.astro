@@ -21,25 +21,15 @@ const metadata: MetaData = {
   description: frontmatter?.description,
   canonical: frontmatter?.canonical,
   openGraph: {
-    title: frontmatter?.title,
-    description: frontmatter?.description,
+    siteName: frontmatter?.title,
     type: 'article',
     url: frontmatter?.canonical || Astro.url.href,
-    image: frontmatter?.image || {
-      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
-      alt: frontmatter?.title || 'Page image',
-      width: 1200,
-      height: 630,
-    },
-    site_name: 'Onsite Car Key',
     locale: 'en_US',
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@onsitecarkey',
-    title: frontmatter?.title,
-    description: frontmatter?.description,
-    image: frontmatter?.image?.src || 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
+    cardType: 'summary_large_image',
+    site: frontmatter?.title,
+    handle: '@onsitecarkey',
   },
 };
 ---
