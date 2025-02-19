@@ -18,9 +18,9 @@ metadata:
   openGraph:
     site_name: Onsite Car Key
     images:
-      - url: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/v1739594496/og_image.png'
+      - url: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_630,c_lfill,f_jpg/v1739763607/og_image'
         width: 1200
-        height: 628
+        height: 630
     type: website
   twitter:
     handle: '@onsitecarkey'
