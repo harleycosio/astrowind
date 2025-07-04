@@ -2,7 +2,7 @@
 publishDate: 2024-02-13T00:00:00Z
 title: Essential Guide to Car Ignition Problems - Repair, Replacement, and Key Extraction
 excerpt: Learn when to seek professional ignition repair services, understand key extraction procedures, and get expert advice on ignition system maintenance.
-image: https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1739292821/pexels-nic-scrollstoppingphotos-28119417_mpnfol.jpg
+image: https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1000,f_auto,ar_1:1,c_fill,g_auto,e_art:hokusai/v1739292821/pexels-nic-scrollstoppingphotos-28119417_mpnfol.jpg
 tags:
   - ignition repair
   - key extraction

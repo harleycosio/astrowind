@@ -3,7 +3,7 @@ publishDate: 2024-02-12T00:00:00Z
 author: Mike Johnson
 title: What to Do When You've Locked Your Keys Inside Your Car
 excerpt: Essential tips and professional advice for handling car lockouts safely and efficiently. Learn the do's and don'ts from experienced automotive locksmiths.
-image: https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1739292817/pexels-daniel-andraski-197681005-11731972_ywd6s3.jpg
+image: https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1000,f_auto,ar_1:1,c_fill,g_auto,e_art:hokusai/v1739292817/pexels-daniel-andraski-197681005-11731972_ywd6s3.jpg
 category: Car Security
 tags:
   - car lockout
