@@ -1,55 +1,57 @@
 ---
-import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
-import { blogCategoryRobots, getStaticPathsBlogCategory } from '~/utils/blog';
-
-import Layout from '~/layouts/PageLayout.astro';
-import BlogList from '~/components/blog/List.astro';
-import Headline from '~/components/blog/Headline.astro';
-import Pagination from '~/components/blog/Pagination.astro';
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import Headline from "~/components/blog/Headline.astro";
+import BlogList from "~/components/blog/List.astro";
+import Pagination from "~/components/blog/Pagination.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import { blogCategoryRobots, getStaticPathsBlogCategory } from "~/utils/blog";
 
 export const prerender = true;
 
 export const getStaticPaths = (async ({ paginate }) => {
-  return await getStaticPathsBlogCategory({ paginate });
+	return await getStaticPathsBlogCategory({ paginate });
 }) satisfies GetStaticPaths;
 
-type Props = InferGetStaticPropsType<typeof getStaticPaths> & { category: Record<string, string> };
+type Props = InferGetStaticPropsType<typeof getStaticPaths> & {
+	category: Record<string, string>;
+};
 
 const { page, category } = Astro.props as Props;
 
 const currentPage = page.currentPage ?? 1;
 
 const metadata = {
-  title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''} | Auto Locksmith Blog`,
-  description: `Expert automotive locksmith articles about ${category.title}. Professional tips and solutions for South Florida drivers.`,
-  robots: {
-    index: blogCategoryRobots?.index,
-    follow: blogCategoryRobots?.follow,
-  },
-  openGraph: {
-    title: `${category.title} - Auto Locksmith Tips & Solutions`,
-    description: `Professional automotive locksmith articles and advice about ${category.title}. Expert insights for South Florida drivers.`,
-    type: 'website',
-    url: `https://onsitecarkey.com/blog/category/${category.slug}${currentPage > 1 ? `/page/${currentPage}` : ''}`,
-    image: {
-      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
-      alt: `${category.title} - Auto Locksmith Articles`,
-      width: 1200,
-      height: 630,
-    },
-    site_name: 'Onsite Car Key',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@onsitecarkey',
-    title: `${category.title} - Auto Locksmith Articles`,
-    description: `Professional automotive locksmith advice about ${category.title}. Serving Miami-Dade, Broward, and Palm Beach counties.`,
-    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
-  },
-  alternates: {
-    canonical: `https://onsitecarkey.com/blog/category/${category.slug}${currentPage > 1 ? `/page/${currentPage}` : ''}`,
-  },
+	title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ""} | Auto Locksmith Blog`,
+	description: `Expert automotive locksmith articles about ${category.title}. Professional tips and solutions for South Florida drivers.`,
+	robots: {
+		index: blogCategoryRobots?.index,
+		follow: blogCategoryRobots?.follow,
+	},
+	openGraph: {
+		title: `${category.title} - Auto Locksmith Tips & Solutions`,
+		description: `Professional automotive locksmith articles and advice about ${category.title}. Expert insights for South Florida drivers.`,
+		type: "website",
+		url: `https://onsitecarkey.com/blog/category/${category.slug}${currentPage > 1 ? `/page/${currentPage}` : ""}`,
+		image: {
+			src: "https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image",
+			alt: `${category.title} - Auto Locksmith Articles`,
+			width: 1200,
+			height: 630,
+		},
+		site_name: "Onsite Car Key",
+		locale: "en_US",
+	},
+	twitter: {
+		card: "summary_large_image",
+		site: "@onsitecarkey",
+		title: `${category.title} - Auto Locksmith Articles`,
+		description: `Professional automotive locksmith advice about ${category.title}. Serving Miami-Dade, Broward, and Palm Beach counties.`,
+		image:
+			"https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image",
+	},
+	alternates: {
+		canonical: `https://onsitecarkey.com/blog/category/${category.slug}${currentPage > 1 ? `/page/${currentPage}` : ""}`,
+	},
 };
 ---
 

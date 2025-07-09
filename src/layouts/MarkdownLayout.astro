@@ -1,36 +1,36 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import type { MetaData } from '~/types';
+import Layout from "~/layouts/PageLayout.astro";
+import type { MetaData } from "~/types";
 
 export interface Props {
-  frontmatter: {
-    title?: string;
-    description?: string;
-    image?: {
-      src: string;
-      alt: string;
-    };
-    canonical?: string;
-  };
+	frontmatter: {
+		title?: string;
+		description?: string;
+		image?: {
+			src: string;
+			alt: string;
+		};
+		canonical?: string;
+	};
 }
 
 const { frontmatter } = Astro.props;
 
 const metadata: MetaData = {
-  title: frontmatter?.title,
-  description: frontmatter?.description,
-  canonical: frontmatter?.canonical,
-  openGraph: {
-    siteName: frontmatter?.title,
-    type: 'article',
-    url: frontmatter?.canonical || Astro.url.href,
-    locale: 'en_US',
-  },
-  twitter: {
-    cardType: 'summary_large_image',
-    site: frontmatter?.title,
-    handle: '@onsitecarkey',
-  },
+	title: frontmatter?.title,
+	description: frontmatter?.description,
+	canonical: frontmatter?.canonical,
+	openGraph: {
+		siteName: frontmatter?.title,
+		type: "article",
+		url: frontmatter?.canonical || Astro.url.href,
+		locale: "en_US",
+	},
+	twitter: {
+		cardType: "summary_large_image",
+		site: frontmatter?.title,
+		handle: "@onsitecarkey",
+	},
 };
 ---
 
