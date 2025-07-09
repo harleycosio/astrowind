@@ -40,14 +40,6 @@ export const headerData = {
 					href: getPermalink("/services/ignition-repair"),
 				},
 				{
-					text: "Key Duplication",
-					//href: getPermalink('/contact'),
-				},
-				{
-					text: "Key Extraction",
-					//href: getPermalink('/terms'),
-				},
-				{
 					text: "All keys lost",
 					href: getPermalink("/services/all-keys-lost"),
 				},
