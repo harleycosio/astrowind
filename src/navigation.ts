@@ -69,22 +69,22 @@ export const footerData = {
 		{
 			ariaLabel: "Reddit",
 			icon: "tabler:brand-reddit",
-			href: "https://reddit.com/r/onsitecarkey",
+			href: "https://reddit.com/u/onsitecarkey",
 		},
 		{
-			ariaLabel: "X",
-			icon: "tabler:brand-x",
-			href: "https://twitter.com/onsitecarkey",
+			ariaLabel: "TikTok",
+			icon: "tabler:brand-tiktok",
+			href: "https://www.tiktok.com/@onsitecarkey",
 		},
 		{
 			ariaLabel: "Instagram",
 			icon: "tabler:brand-instagram",
-			href: "https://instagram.com/onsitecarkey",
+			href: "https://www.instagram.com/harley.cosio",
 		},
 		{
 			ariaLabel: "Facebook",
 			icon: "tabler:brand-facebook",
-			href: "https://m.me/onsitecarkey",
+			href: "https://www.facebook.com/people/Onsite-Car-Key/61573376696110/",
 		},
 	],
 	companyInfo: {
