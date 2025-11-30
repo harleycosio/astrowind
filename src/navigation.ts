@@ -5,24 +5,7 @@ export const headerData = {
 		{
 			text: "Home",
 			href: getPermalink("/"),
-			/* links: [
-        {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
-      ],*/
+
 		},
 		{
 			text: "Services",
@@ -88,9 +71,9 @@ export const footerData = {
 		},
 	],
 	companyInfo: {
-		name: "Onsite Car Key LLC",
+		name: "Onsite Car Key",
 		address: "South Florida",
-		phone: "(305) 555-5887", // Update with actual number
+		phone: "(954) 998-5887", // Update with actual number
 		email: "info@onsitecarkey.com",
 	},
 };
