@@ -21,7 +21,7 @@ For the purposes of these Terms and Conditions:
 
 - **Country** refers to: Kentucky, United States
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Onsite Car Key LLC, Louisville, KY.
+- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Onsite Car Key LLC.
 
 - **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
 
@@ -112,4 +112,4 @@ By continuing to access or use Our Service after those revisions become effectiv
 If you have any questions about these Terms and Conditions, You can contact us:
 
 - By phone: (502) 717-5887
-- By email: info@onsitecarkey.com
+- By email: <info@onsitecarkey.com>

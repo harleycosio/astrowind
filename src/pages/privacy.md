@@ -20,7 +20,7 @@ The words of which the initial letter is capitalized have meanings defined under
 For the purposes of this Privacy Policy:
 
 - **Account** means a unique account created for You to access our Service or parts of our Service.
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Onsite Car Key LLC, Louisville, KY.
+- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Onsite Car Key LLC.
 - **Cookies** are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.
 - **Country** refers to: Kentucky, United States
 - **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
@@ -181,5 +181,5 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 If you have any questions about this Privacy Policy, You can contact us:
 
 - By phone: (502) 717-5887
-- By email: info@onsitecarkey.com
+- By email: <info@onsitecarkey.com>
 - By visiting this page on our website: [https://onsitecarkey.com/contact](https://onsitecarkey.com/contact)
