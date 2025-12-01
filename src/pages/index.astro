@@ -3,10 +3,12 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 import Note from '~/components/widgets/Note.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getCldOgImageUrl } from 'astro-cloudinary/helpers';
+import Hero2 from '~/components/widgets/Hero2.astro';
 
 const ogImageUrl = getCldOgImageUrl({
   src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/v1739763607/og_image_updated.jpg',
@@ -50,7 +52,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero Widget ******************* 
 
   <Hero
     actions={[
@@ -81,8 +83,36 @@ const metadata = {
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Mobile Car Key Services</span> Serving Miami-Dade, Broward,
       and Palm Beach counties with expert key cutting, programming, and emergency lockout assistance.
     </Fragment>
-  </Hero>
-
+  </Hero> -->
+<Hero2
+    actions={[
+      {
+        variant: 'primary',
+        text: '(954) 998-5887', // Update with actual South Florida phone number
+        href: 'tel:9549985887',
+        target: '_self',
+        icon: 'tabler:phone',
+      },
+      { text: 'Our Services', href: '/services', icon: 'tabler:arrow-right' },
+    ]}
+    image={{
+      src: '~/assets/images/hero-image.png',
+      fetchpriority: 'high',
+      alt: 'Emergency car key service in South Florida',
+    }}
+  >
+    <Fragment slot="title">
+      Emergency<span class="text-accent dark:text-white highlight"> Car Key Services</span> in South Florida</Fragment
+    > 
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Lost your car keys? Locked out? We've got you covered.</span> Professional automotive
+        locksmith services with fast response times and competitive rates.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Mobile Car Key Services</span> Serving Miami-Dade, Broward,
+      and Palm Beach counties with expert key cutting, programming, and emergency lockout assistance.
+    </Fragment>
+  </Hero2>
   <!-- Note Widget ******************* -->
   <Note />
 
