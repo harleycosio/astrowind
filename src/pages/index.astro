@@ -44,13 +44,13 @@ const metadata = {
     title: '24/7 Car Locksmith Services South Florida',
     description:
       'Professional automotive locksmith services in South Florida. Emergency car key replacement, lockout assistance, and key programming. Available 24/7.',
-    image: {twitterImageUrl },
+    image: { twitterImageUrl },
   },
 };
 ---
 
 <Layout metadata={metadata}>
-<Hero2
+  <Hero2
     actions={[
       {
         variant: 'primary',
@@ -69,7 +69,7 @@ const metadata = {
   >
     <Fragment slot="title">
       Emergency<span class="text-accent dark:text-white highlight"> Car Key Services</span> in South Florida</Fragment
-    > 
+    >
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
         <span class="font-semibold">Lost your car keys? Locked out? We've got you covered.</span> Professional automotive
@@ -142,6 +142,10 @@ const metadata = {
     image={{
       src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/c_scale,dpr_auto,w_auto/onsitekeyduplication_with_multiple_car_keys.WebP',
       alt: 'Onsite Key Duplication Image',
+      layout: 'responsive',
+      loading: 'lazy',
+      decoding: 'async',
+      fetchpriority: 'low',
     }}
   >
     <Fragment slot="content">Reliable locksmith in South Florida.</Fragment>
