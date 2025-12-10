@@ -13,8 +13,8 @@ const ogImageUrl = getCldOgImageUrl({
 });
 
 const twitterImageUrl = getCldOgImageUrl({
-  src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/v1739763607/og_image_updated.webp',
-  format: 'webp',
+  src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/og_image_updated.png',
+  format: 'png',
 });
 
 const metadata = {
@@ -38,13 +38,12 @@ const metadata = {
     locale: 'en_US',
   },
   twitter: {
-    cardType: 'summary_large_image',
-    creator: '@onsitecarkey',
+    card: 'summary_large_image',
     site: '@onsitecarkey',
-    title: '24/7 Car Locksmith Services South Florida',
+    title: 'Locksmith Services South Florida',
     description:
       'Professional automotive locksmith services in South Florida. Emergency car key replacement, lockout assistance, and key programming. Available 24/7.',
-    image: { twitterImageUrl },
+    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/og_image_updated.png',
   },
 };
 ---
