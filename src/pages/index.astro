@@ -5,31 +5,21 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Note from '~/components/widgets/Note.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import { getCldOgImageUrl } from 'astro-cloudinary/helpers';
 import Hero2 from '~/components/widgets/Hero2.astro';
 
-const ogImageUrl = getCldOgImageUrl({
-  src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/v1739763607/og_image_updated.jpg',
-});
-
-const twitterImageUrl = getCldOgImageUrl({
-  src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/og_image_updated.png',
-  format: 'png',
-});
-
 const metadata = {
-  title: '24/7 Car Key Replacement & Locksmith Services South Florida | Onsite Car Key',
+  title: 'Car Key Replacement & Locksmith Services South Florida | Onsite Car Key',
   description:
     'Professional automotive locksmith services in South Florida. Emergency car key replacement, lockout assistance, and key programming. Available 24/7 with fast response times.',
   ignoreTitleTemplate: true,
   openGraph: {
-    title: '24/7 Car Key Replacement & Locksmith Services South Florida | Onsite Car Key',
+    title: 'Car Key Replacement & Locksmith Services South Florida | Onsite Car Key',
     description:
       'Professional automotive locksmith services in South Florida. Emergency car key replacement, lockout assistance, and key programming. Available 24/7 with fast response times.',
     type: 'website',
     url: 'https://onsitecarkey.com',
     image: {
-      src: { ogImageUrl },
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/og_image_updated.png',
       alt: 'Locksmith in South Florida',
       width: 1200,
       height: 630,
