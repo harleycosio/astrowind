@@ -28,6 +28,7 @@ const whenExternalScripts = (
 		: [];
 
 export default defineConfig({
+	site: 'https://onsitecarkey.com',
 	output: "static",
 
 	i18n: {

@@ -9,8 +9,7 @@ tags:
   - transponder keys
   - automotive technology
 category: Vehicle Security
-metadata:
-  canonical: https://onsitecarkey.com/blog/transponder-key-programming-guide-car-security
+translationId: transponder-guide
 ---
 
 ## Understanding Modern Car Security

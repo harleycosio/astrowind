@@ -45,6 +45,9 @@ export interface Post {
 
 	/**  */
 	language?: string;
+
+	/**  */
+	translationId?: string;
 }
 
 export interface Taxonomy {
@@ -64,6 +67,8 @@ export interface MetaData {
 
 	openGraph?: MetaDataOpenGraph;
 	twitter?: MetaDataTwitter;
+
+	languageAlternates?: Array<{ hrefLang: string; href: string }>;
 }
 
 export interface MetaDataRobots {

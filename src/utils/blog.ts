@@ -112,6 +112,7 @@ const getNormalizedPost = async (
 		draft: draft,
 
 		metadata,
+		translationId: data.translationId,
 
 		Content: Content,
 		// or 'content' in case you consume from API

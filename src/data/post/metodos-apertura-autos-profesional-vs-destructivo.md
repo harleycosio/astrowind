@@ -9,8 +9,7 @@ tags:
   - seguridad
 category: Herramientas Profesionales
 language: es
-metadata:
-  canonical: https://onsitecarkey.com/es/blog/metodos-apertura-autos-profesional-vs-destructivo
+translationId: unlocking-methods
 ---
 
 ## Entendiendo los Métodos Profesionales de Apertura

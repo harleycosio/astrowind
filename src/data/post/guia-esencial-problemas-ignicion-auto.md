@@ -10,8 +10,7 @@ tags:
   - seguridad automotriz
 category: Mantenimiento de Auto
 language: es
-metadata:
-  canonical: https://onsitecarkey.com/es/blog/guia-problemas-ignicion-auto
+translationId: ignition-guide
 ---
 
 # Guía Esencial de Problemas de Ignición de Autos

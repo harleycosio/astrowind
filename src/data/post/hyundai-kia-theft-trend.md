@@ -11,6 +11,8 @@ tags:
     - vehicle security
     - automotive security
 category: Car Security
+language: en
+translationId: hyundai-theft
 ---
 
 If you've been following recent car theft trends, you may have noticed that Hyundai and Kia vehicles are frequently in the headlines for all the wrong reasons. Over the past few years, these brands have become some of the most stolen cars in the U.S., thanks in large part to a viral social media challenge exposing a critical security flaw.

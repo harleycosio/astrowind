@@ -12,8 +12,7 @@ tags:
     - seguridad automotriz
 category: Seguridad Automotriz
 language: es
-metadata:
-  canonical: https://onsitecarkey.com/es/blog/robo-hyundai-kia-explicacion
+translationId: hyundai-theft
 ---
 
 Si has estado siguiendo las tendencias recientes de robo de autos, habrás notado que los vehículos Hyundai y Kia aparecen con frecuencia en los titulares por las razones equivocadas. En los últimos años, estas marcas se han convertido en algunos de los autos más robados en EE. UU., en gran parte debido a un desafío viral en redes sociales que expuso una falla de seguridad crítica.

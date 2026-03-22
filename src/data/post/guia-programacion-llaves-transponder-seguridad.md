@@ -10,8 +10,7 @@ tags:
   - tecnología automotriz
 category: Seguridad Vehicular
 language: es
-metadata:
-  canonical: https://onsitecarkey.com/es/blog/guia-programacion-llaves-transponder-seguridad
+translationId: transponder-guide
 ---
 
 ## Entendiendo la Seguridad Automotriz Moderna

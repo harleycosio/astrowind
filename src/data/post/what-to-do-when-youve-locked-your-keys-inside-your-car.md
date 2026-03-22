@@ -9,8 +9,8 @@ tags:
   - car lockout
   - automotive security
   - emergency tips
-metadata:
-  canonical: https://onsitecarkey.com/blog/locked-keys-in-car-guide
+language: en
+translationId: locked-keys
 ---
 
 # What to Do When You've Locked Your Keys Inside Your Car

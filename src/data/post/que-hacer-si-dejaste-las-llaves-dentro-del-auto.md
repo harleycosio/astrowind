@@ -10,8 +10,8 @@ tags:
   - seguridad automotriz
   - consejos de emergencia
 metadata:
-  canonical: https://onsitecarkey.com/es/blog/que-hacer-llaves-dentro-auto
 language: es
+translationId: locked-keys
 ---
 
 # Qué hacer si dejaste las llaves dentro de tu auto

@@ -21,6 +21,7 @@ const {
   description,
   openGraph = {},
   twitter = {},
+  languageAlternates = [],
 } = Astro.props;
 
 const seoProps: AstroSeoProps = merge(
@@ -62,6 +63,30 @@ const seoProps: AstroSeoProps = merge(
     twitter: twitter,
   }
 );
+
+// Hreflang logic
+const currentPathname = Astro.url.pathname;
+const cleanPath = currentPathname.replace(/^\/es(\/|$)/, '/');
+const locales = ['en', 'es'];
+
+// If languageAlternates are provided (e.g. from blog posts with different slugs), use them.
+// Otherwise, use the default path-based logic.
+const finalLanguageAlternates = languageAlternates.length > 0
+  ? languageAlternates
+  : locales.map((lang) => ({
+      hrefLang: lang,
+      href: String(getCanonical(lang === 'en' ? cleanPath : `/es${cleanPath === '/' ? '' : cleanPath}`)),
+    }));
+
+const xDefault = finalLanguageAlternates.find((h) => h.hrefLang === 'en' || h.hrefLang === 'x-default')?.href 
+                || finalLanguageAlternates[0]?.href;
 ---
 
-<AstroSeo {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site) }} />
+<AstroSeo 
+  {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site) }} 
+/>
+
+{finalLanguageAlternates.map((h) => (
+  <link rel="alternate" hreflang={h.hrefLang} href={h.href} />
+))}
+{xDefault && <link rel="alternate" hreflang="x-default" href={xDefault} />}

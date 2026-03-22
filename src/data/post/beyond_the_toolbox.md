@@ -9,9 +9,9 @@ tags:
     - automotive
     - pricing transparency
     - mobile services
-category: Automotive Locksmith
-metadata:
-    canonical: https://onsitecarkey.com/blog/beyond-the-toolbox-why-automotive-locksmith-services-cost-what-they-do
+category: Professional Insights
+language: en
+translationId: beyond-toolbox
 ---
 
 When you're locked out of your car on a rainy night or your key fob suddenly dies, getting back on the road quickly and safely is all that matters. But when you receive a quote from a professional automotive locksmith, you might wonder: "Why does it cost this much?"

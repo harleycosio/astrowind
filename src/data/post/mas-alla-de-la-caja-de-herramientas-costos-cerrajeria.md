@@ -9,10 +9,9 @@ tags:
     - automotriz
     - transparencia de precios
     - servicios móviles
-category: Cerrajería Automotriz
+category: Perspectivas Profesionales
 language: es
-metadata:
-    canonical: https://onsitecarkey.com/es/blog/mas-alla-caja-herramientas-costos-cerrajeria
+translationId: beyond-toolbox
 ---
 
 Cuando te quedas fuera de tu auto en una noche lluviosa o tu mando a distancia muere de repente, lo único que importa es volver a la carretera de forma rápida y segura. Pero cuando recibes un presupuesto de un cerrajero automotriz profesional, podrías preguntarte: "¿Por qué cuesta esto?".

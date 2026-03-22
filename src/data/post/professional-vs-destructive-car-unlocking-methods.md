@@ -7,9 +7,9 @@ tags:
   - car unlocking
   - professional tools
   - security
-category: Professional Tools
-metadata:
-  canonical: https://onsitecarkey.com/blog/professional-vs-destructive-car-unlocking-methods
+category: Professional Services
+language: en
+translationId: unlocking-methods
 ---
 
 ## Understanding Professional Car Entry Methods
