@@ -8,6 +8,8 @@ import Layout from "~/layouts/PageLayout.astro";
 
 import { blogListRobots, getStaticPathsBlogList } from "~/utils/blog";
 
+import { useTranslations } from "~/i18n/utils";
+
 export const prerender = true;
 
 export const getStaticPaths = (async ({ paginate }) => {
@@ -16,26 +18,24 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { page } = Astro.props as Props;
+const { page, lang } = Astro.props as Props;
+const t = useTranslations(lang as 'en' | 'es');
 const currentPage = page.currentPage ?? 1;
 
-// const allCategories = await findCategories();
-// const allTags = await findTags();
-
 const metadata = {
-	title: `Auto Locksmith Blog${currentPage > 1 ? ` — Page${currentPage}` : ""} | Onsite Car Key`,
-	description:
-		"Expert automotive locksmith tips, vehicle security guides, and professional advice for car owners in South Florida. Learn about key replacement, lockout solutions, and more.",
+	title: `${t('nav.blog')}${currentPage > 1 ? ` — Page ${currentPage}` : ""} | Onsite Car Key`,
+	description: lang === 'es' 
+    ? "Consejos de cerrajería, guías de seguridad y asesoramiento profesional para dueños de autos en el Sur de Florida."
+    : "Expert automotive locksmith tips, vehicle security guides, and professional advice for car owners in South Florida.",
 	robots: {
 		index: blogListRobots?.index && currentPage === 1,
 		follow: blogListRobots?.follow,
 	},
 	openGraph: {
-		title: "Auto Locksmith Blog - Expert Tips & Solutions | Onsite Car Key",
-		description:
-			"Professional automotive locksmith advice, key replacement guides, and security tips for South Florida drivers. Serving Miami-Dade, Broward, and Palm Beach counties.",
+		title: lang === 'es' ? "Blog de Cerrajería Automotriz - Consejos y Soluciones" : "Auto Locksmith Blog - Expert Tips & Solutions",
+		description: lang === 'es' ? "Consejos profesionales y guías de seguridad para conductores en el Sur de Florida." : "Professional automotive locksmith advice and security tips for South Florida drivers.",
 		type: "blog",
-		url: `https://onsitecarkey.com/blog${currentPage > 1 ? `/page/${currentPage}` : ""}`,
+		url: `https://onsitecarkey.com/${lang === 'en' ? '' : 'es/'}blog${currentPage > 1 ? `/page/${currentPage}` : ""}`,
 		image: {
 			src: "https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image",
 			alt: "Auto Locksmith Tips and Solutions Blog",
@@ -43,29 +43,7 @@ const metadata = {
 			height: 630,
 		},
 		site_name: "Onsite Car Key",
-		locale: "en_US",
-		article: {
-			authors: ["Onsite Car Key"],
-			tags: [
-				"auto locksmith",
-				"car keys",
-				"vehicle security",
-				"lockout solutions",
-				"South Florida",
-			],
-		},
-	},
-	twitter: {
-		card: "summary_large_image",
-		site: "@onsitecarkey",
-		title: "Auto Locksmith Tips & Solutions Blog | Onsite Car Key",
-		description:
-			"Professional automotive locksmith advice and guides for South Florida drivers.",
-		image:
-			"https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image",
-	},
-	alternates: {
-		canonical: `https://onsitecarkey.com/blog${currentPage > 1 ? `/page/${currentPage}` : ""}`,
+		locale: lang === 'es' ? "es_US" : "en_US",
 	},
 };
 ---
@@ -73,9 +51,11 @@ const metadata = {
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline
-      subtitle="Expert insights on vehicle security, key replacement tips, and professional locksmith advice for car owners in Miami-Dade, Broward, and Palm Beach counties"
+      subtitle={lang === 'es' 
+        ? "Información experta sobre seguridad de vehículos, consejos para el reemplazo de llaves y asesoramiento profesional de cerrajería."
+        : "Expert insights on vehicle security, key replacement tips, and professional locksmith advice."}
     >
-      The Blog
+      {t('nav.blog')}
     </Headline>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />

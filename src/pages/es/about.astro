@@ -1,0 +1,164 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Sobre Onsite Car Key - Cerrajero Automotriz de Confianza en el Sur de Florida',
+  description:
+    'Conoce el principal servicio de cerrajería automotriz del Sur de Florida. Sirviendo a los condados de Miami-Dade, Broward y Palm Beach con servicios profesionales de llaves desde 2015.',
+  openGraph: {
+    title: 'Sobre Onsite Car Key - El Líder en Cerrajería Automotriz del Sur de Florida',
+    description:
+      'Servicio profesional de cerrajería automotriz sirviendo al área de los tres condados del Sur de Florida. Licenciado, asegurado y disponible 24/7 con más de 15,000 clientes satisfechos.',
+    type: 'website',
+    url: 'https://onsitecarkey.com/es/about',
+    image: {
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
+      alt: 'Servicio profesional de cerrajería automotriz en el Sur de Florida',
+      width: 1200,
+      height: 630,
+    },
+    site_name: 'Onsite Car Key',
+    locale: 'es_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@onsitecarkey',
+    title: 'El Cerrajero de Autos de Confianza del Sur de Florida - Sobre Nosotros',
+    description: 'Servicio profesional de cerrajería automotriz sirviendo a Miami-Dade, Broward y Palm Beach desde 2015.',
+    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Sobre Nosotros"
+    image={{
+      src: '~/assets/images/professional-locksmith.jpg',
+      alt: 'Servicio profesional de cerrajería automotriz en el Sur de Florida',
+    }}
+  >
+    <Fragment slot="title">
+      El Cerrajero Automotriz de <span class="text-accent dark:text-white highlight">Confianza</span> del Sur de Florida
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Desde 2015, Onsite Car Key ha proporcionado servicios profesionales de cerrajería automotriz al área de los tres
+      condados del Sur de Florida. Nos enorgullecemos de nuestros rápidos tiempos de respuesta, precios competitivos y
+      un servicio al cliente excepcional.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Nuestro Crecimiento en Números"
+    stats={[
+      { title: 'Años de Servicio', amount: '9+' },
+      { title: 'Clientes Satisfechos', amount: '15K+' },
+      { title: 'Tiempo de Respuesta', amount: '40min' },
+      { title: 'Millas de Área de Servicio', amount: '50' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="¿Por qué elegir Onsite Car Key?"
+    subtitle="Combinamos experiencia profesional con dedicación local para brindar los mejores servicios de cerrajería automotriz en el Sur de Florida."
+    columns={3}
+    items={[
+      {
+        title: 'Licenciado y Asegurado',
+        description:
+          'Totalmente licenciado y asegurado para su tranquilidad. Nuestros técnicos están certificados y se capacitan regularmente en las últimas tecnologías de seguridad automotriz.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Disponibilidad 24/7',
+        description:
+          'Servicios de emergencia disponibles las 24 horas del día, los 7 días de la semana. Entendemos que los problemas con las llaves pueden ocurrir en cualquier momento.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Equipo Avanzado',
+        description:
+          'Equipo de corte y programación de llaves de última generación para manejar todas las marcas y modelos de vehículos.',
+        icon: 'tabler:tools',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Nuestros Valores Fundamentales"
+    subtitle="En Onsite Car Key, creemos en brindar más que solo servicios de cerrajería. Estamos comprometidos con la excelencia en todo lo que hacemos."
+    items={[
+      {
+        title: 'El Cliente es lo Primero',
+        description:
+          'Cada decisión que tomamos se enfoca en brindar el mejor servicio posible a nuestros clientes. Priorizamos su seguridad y satisfacción.',
+      },
+      {
+        title: 'Excelencia Profesional',
+        description:
+          'Nuestros técnicos se someten a una formación continua para mantenerse al día con las últimas tecnologías y técnicas de seguridad automotriz.',
+      },
+      {
+        title: 'Precios Honestos',
+        description:
+          'Creemos en precios transparentes sin cargos ocultos. Siempre sabrá el costo por adelantado antes de que comience cualquier trabajo.',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Cobertura de Servicio"
+    tagline="Donde Servimos"
+    columns={3}
+    items={[
+      {
+        title: 'Condado de Miami-Dade',
+        description: 'Cobertura completa de Miami, Miami Beach, Hialeah y ciudades circundantes.',
+      },
+      {
+        title: 'Condado de Broward',
+        description: 'Sirviendo a Fort Lauderdale, Hollywood, Pompano Beach y áreas cercanas.',
+      },
+      {
+        title: 'Condado de Palm Beach',
+        description: 'Disponible en West Palm Beach, Boca Raton y comunidades circundantes.',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Contacta a Nuestro Equipo"
+    tagline="Ponte en Contacto"
+    columns={2}
+    items={[
+      {
+        title: 'Servicio de Emergencia 24/7',
+        description: 'Llama al (954) 998-5887 para asistencia inmediata',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Horario de Atención',
+        description: 'Lunes a Domingo: Abierto las 24 Horas',
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+</Layout>

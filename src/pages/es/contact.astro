@@ -1,0 +1,106 @@
+---
+import Features2 from "~/components/widgets/Features2.astro";
+import Layout from "~/layouts/PageLayout.astro";
+
+const metadata = {
+	title: "Contacta a Onsite Car Key | Cerrajero de Autos 24/7 en el Sur de Florida",
+	description:
+		"¿Necesitas un cerrajero de autos en el Sur de Florida? Contáctanos para servicio de emergencia 24/7 en los condados de Miami-Dade, Broward y Palm Beach.",
+	openGraph: {
+		title: "Contacta a Onsite Car Key | El Líder en Cerrajería Automotriz del Sur de Florida",
+		description:
+			"Servicios profesionales de cerrajería automotriz disponibles los 7 días de la semana, las 24 horas. Servicio de emergencia, programación de llaves y asistencia por bloqueo en Miami-Dade, Broward y Palm Beach.",
+		type: "website",
+		url: "https://onsitecarkey.com/es/contact",
+		image: {
+			src: "https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image",
+			alt: "Servicio de Cerrajería Automotriz 24/7 en el Sur de Florida",
+			width: 1200,
+			height: 630,
+		},
+		site_name: "Onsite Car Key",
+		locale: "es_US",
+	},
+	twitter: {
+		card: "summary_large_image",
+		site: "@onsitecarkey",
+		title: "Contacta a tu Cerrajero de Autos Local en el Sur de Florida",
+		description:
+			"Servicio de cerrajería automotriz de emergencia 24/7 en los condados de Miami-Dade, Broward y Palm Beach. Profesionalismo y confiabilidad cuando más lo necesitas.",
+		image:
+			"https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image",
+	},
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Ponte en Contacto"
+    subtitle="Varias formas de contactar a nuestro equipo profesional de cerrajería automotriz"
+    items={[
+      {
+        title: 'Servicio de Emergencia',
+        description: '(954) 998-5887',
+        icon: 'tabler:phone',
+        callToAction: {
+          text: 'Llamar Ahora',
+          href: 'tel:9549985887',
+        },
+      },
+      {
+        title: 'Correo Electrónico',
+        description: 'info@onsitecarkey.com',
+        icon: 'tabler:mail',
+        callToAction: {
+          text: 'Enviar Correo',
+          href: 'mailto:info@onsitecarkey.com',
+        },
+      },
+      {
+        title: 'WhatsApp',
+        description: 'Chatea con nosotros por WhatsApp',
+        icon: 'tabler:brand-whatsapp',
+        callToAction: {
+          text: 'Enviar Mensaje',
+          href: 'https://wa.me/9549985887',
+        },
+      },
+      {
+        title: 'Facebook Messenger',
+        description: 'Conéctate en Facebook',
+        icon: 'tabler:brand-messenger',
+        callToAction: {
+          text: 'Enviar Mensaje',
+          href: 'https://m.me/onsitecarkey',
+        },
+      },
+      {
+        title: 'X',
+        description: 'Síguenos para novedades y mensajes directos',
+        icon: 'tabler:brand-x',
+        callToAction: {
+          text: 'Seguir',
+          href: 'https://twitter.com/onsitecarkey',
+        },
+      },
+      {
+        title: 'Instagram',
+        description: 'Síguenos para ver nuestras novedades',
+        icon: 'tabler:brand-instagram',
+        callToAction: {
+          text: 'Seguir',
+          href: 'https://instagram.com/onsitecarkey',
+        },
+      },
+      {
+        title: 'Área de Servicio',
+        description: 'Área de Servicio: Condados de Miami-Dade, Broward y Palm Beach',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+    columns={3}
+    classes={{ container: 'max-w-5xl' }}
+  />
+</Layout>

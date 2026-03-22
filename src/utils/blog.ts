@@ -17,11 +17,13 @@ const generatePermalink = async ({
 	slug,
 	publishDate,
 	category,
+	lang,
 }: {
 	id: string;
 	slug: string;
 	publishDate: Date;
 	category: string | undefined;
+	lang: string;
 }) => {
 	const year = String(publishDate.getFullYear()).padStart(4, "0");
 	const month = String(publishDate.getMonth() + 1).padStart(2, "0");
@@ -40,11 +42,13 @@ const generatePermalink = async ({
 		.replace("%minute%", minute)
 		.replace("%second%", second);
 
-	return permalink
+	const path = permalink
 		.split("/")
 		.map((el) => trimSlash(el))
 		.filter((el) => !!el)
 		.join("/");
+
+	return lang && lang !== "en" ? `${lang}/${path}` : path;
 };
 
 const getNormalizedPost = async (
@@ -64,6 +68,7 @@ const getNormalizedPost = async (
 		author,
 		draft = false,
 		metadata = {},
+		language = 'en',
 	} = data;
 
 	const slug = cleanSlug(id); // cleanSlug(rawSlug.split('/').pop());
@@ -90,6 +95,7 @@ const getNormalizedPost = async (
 			slug,
 			publishDate,
 			category: category?.slug,
+			lang: language,
 		}),
 
 		publishDate: publishDate,
@@ -111,6 +117,8 @@ const getNormalizedPost = async (
 		// or 'content' in case you consume from API
 
 		readingTime: remarkPluginFrontmatter?.readingTime,
+
+		language: language,
 	};
 };
 
@@ -145,9 +153,13 @@ export const blogTagRobots = APP_BLOG.tag.robots;
 export const blogPostsPerPage = APP_BLOG?.postsPerPage;
 
 /** */
-export const fetchPosts = async (): Promise<Array<Post>> => {
+export const fetchPosts = async (lang?: string): Promise<Array<Post>> => {
 	if (!_posts) {
 		_posts = await load();
+	}
+
+	if (lang) {
+		return _posts.filter((post) => post.language === lang);
 	}
 
 	return _posts;
@@ -184,11 +196,13 @@ export const findPostsByIds = async (
 /** */
 export const findLatestPosts = async ({
 	count,
+	lang,
 }: {
 	count?: number;
+	lang?: string;
 }): Promise<Array<Post>> => {
 	const _count = count || 4;
-	const posts = await fetchPosts();
+	const posts = await fetchPosts(lang);
 
 	return posts ? posts.slice(0, _count) : [];
 };
@@ -200,18 +214,30 @@ export const getStaticPathsBlogList = async ({
 	paginate: PaginateFunction;
 }) => {
 	if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
-	return paginate(await fetchPosts(), {
-		params: { blog: BLOG_BASE || undefined },
-		pageSize: blogPostsPerPage,
-	});
+
+	const allLocales = ['en', 'es']; // Or get from config
+	const allPaths = await Promise.all(allLocales.map(async (lang) => {
+		const posts = await fetchPosts(lang);
+		const blogPath = lang === 'en' ? BLOG_BASE : `${lang}/${BLOG_BASE}`;
+		
+		return paginate(posts, {
+			params: { blog: blogPath || undefined },
+			pageSize: blogPostsPerPage,
+			props: { lang },
+		});
+	}));
+
+	return allPaths.flat();
 };
 
 /** */
 export const getStaticPathsBlogPost = async () => {
 	if (!isBlogEnabled || !isBlogPostRouteEnabled) return [];
-	return (await fetchPosts()).flatMap((post) => ({
+	const allPosts = await fetchPosts();
+	return allPosts.flatMap((post) => ({
 		params: {
 			blog: post.permalink,
+			lang: post.language === 'en' ? undefined : post.language,
 		},
 		props: { post },
 	}));

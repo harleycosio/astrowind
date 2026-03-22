@@ -1,0 +1,136 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Servicios de Cerrajería Automotriz en el Sur de Florida | Onsite Car Key',
+  description:
+    'Servicios profesionales de cerrajería en los condados de Miami-Dade, Broward y Palm Beach. Programación de llaves inteligentes, apertura de autos, reparación de ignición y más. Disponible 24/7.',
+  canonical: 'https://onsitecarkey.com/es/services',
+  openGraph: {
+    title: 'Servicios Profesionales de Cerrajería de Autos en el Sur de Florida | Onsite Car Key',
+    description:
+      'Expertos en cerrajería automotriz incluyendo programación de llaves inteligentes, apertura de autos, reparación de ignición y duplicación de llaves. Disponible 24/7 en todo el Sur de Florida.',
+    type: 'website',
+    url: 'https://onsitecarkey.com/es/services',
+    image: {
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
+      alt: 'Servicios profesionales de cerrajería en el Sur de Florida',
+      width: 1200,
+      height: 630,
+    },
+    site_name: 'Onsite Car Key',
+    locale: 'es_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@onsitecarkey',
+    title: 'Servicios de Cerrajería Automotriz en el Sur de Florida | Disponible 24/7',
+    description:
+      'Servicios profesionales de cerrajería automotriz en el Sur de Florida. Llaves inteligentes, aperturas, reparación de ignición y más.',
+    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/og_image_updated.png',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Nuestros Servicios de Cerrajería"
+    subtitle="Ofrecemos una amplia gama de servicios de cerrajería automotriz para satisfacer sus necesidades."
+    image={{
+      src: '~/assets/images/car-locksmith-services.jpg',
+      alt: 'Servicios de cerrajería automotriz',
+    }}
+    items={[
+      {
+        title: 'Programación de Llaves Inteligentes',
+        description:
+          'Programación avanzada para llaves inteligentes modernas y mandos a distancia. Compatible con las principales marcas de autos.',
+        icon: 'tabler:cpu',
+        callToAction: {
+          text: 'Leer Más',
+          href: '/es/services/smart-keys',
+        },
+      },
+      {
+        title: 'Apertura de Vehículos',
+        description:
+          'Apertura de autos rápida y sin daños con herramientas profesionales. Disponible 24/7 para situaciones de emergencia.',
+        icon: 'tabler:car',
+        callToAction: {
+          text: 'Leer Más',
+          href: '/es/services/car-unlocking',
+        },
+      },
+      {
+        title: 'Reparación/Cambio de Ignición',
+        description: 'Servicios expertos en reparación y cambio de sistemas de encendido para que vuelvas a la carretera pronto.',
+        icon: 'tabler:settings',
+        callToAction: {
+          text: 'Leer Más',
+          href: '/es/services/ignition-repair',
+        },
+      },
+      {
+        title: 'Duplicación de Llaves',
+        description:
+          'Corte de llaves de alta precisión para todo tipo de vehículos. Materiales de calidad original para un ajuste perfecto.',
+        icon: 'tabler:copy',
+        callToAction: {
+          text: 'Llamar ahora',
+          href: 'tel:9549985887',
+        },
+      },
+      {
+        title: 'Extracción de Llaves',
+        description: 'Retiro seguro y eficiente de llaves rotas de cerraduras e igniciones sin causar daños al vehículo.',
+        icon: 'tabler:key',
+        callToAction: {
+          text: 'Llamar ahora',
+          href: 'tel:9549985887',
+        },
+      },
+      {
+        title: 'Situación de Llaves Perdidas',
+        description:
+          'Soluciones integrales cuando se han perdido todas las llaves. Podemos crear llaves nuevas y reprogramar su auto.',
+        icon: 'tabler:alert-triangle',
+        callToAction: {
+          text: 'Leer Más',
+          href: '/es/services/all-keys-lost',
+        },
+      },
+    ]}
+  />
+
+  <BlogLatestPosts
+    id="blog"
+    title="Explora artículos útiles en nuestro blog"
+    information={`Consulta nuestro blog para recibir consejos profesionales sobre seguridad del auto, reemplazo de llaves y servicios de cerrajería.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contáctanos',
+        href: '/es/contact',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+    <Fragment slot="title">¿Necesitas Servicios Profesionales de Cerrajería?</Fragment>
+
+    <Fragment slot="subtitle">
+      Contáctanos hoy para servicios rápidos, confiables y profesionales en los condados de Miami-Dade, Broward y Palm Beach.
+    </Fragment>
+  </CallToAction>
+</Layout>

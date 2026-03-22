@@ -19,7 +19,8 @@ export interface Props {
 }
 
 const { metadata = {} } = Astro.props;
-const { language, textDirection } = I18N;
+const language = Astro.currentLocale || I18N.language;
+const textDirection = I18N.textDirection;
 ---
 
 <!doctype html>
@@ -31,6 +32,28 @@ const { language, textDirection } = I18N;
     <ApplyColorMode />
     <Metadata {...metadata} />
     <SiteVerification />
+    <script is:inline>
+      (function() {
+        const currentPath = window.location.pathname;
+        const isRoot = currentPath === '/' || currentPath === '';
+        const savedLang = localStorage.getItem('preferred-lang');
+        const browserLang = navigator.language.split('-')[0];
+
+        // 1. If we are on an explicit language path, save that preference
+        if (currentPath.startsWith('/es')) {
+          localStorage.setItem('preferred-lang', 'es');
+        } else if (currentPath === '/' || !currentPath.includes('/es/')) {
+          // If the user explicitly goes to an English page, they might want English
+          // but we only save it if they've been at root or specific pages.
+          // For now, let's only save it if they arrived here from a switch.
+        }
+
+        // 2. Redirect only if at root and no preference is saved yet
+        if (isRoot && !savedLang && browserLang === 'es') {
+          window.location.pathname = '/es';
+        }
+      })();
+    </script>
     <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />
   </head>

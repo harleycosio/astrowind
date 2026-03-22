@@ -1,0 +1,109 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Programación y Reemplazo de Llaves Inteligentes en el Sur de Florida',
+  description:
+    'Expertos en programación de llaves inteligentes y mandos a distancia en Miami-Dade, Broward y Palm Beach. Repuestos de calidad OEM, servicio móvil 24/7.',
+  openGraph: {
+    title: 'Programación Profesional de Llaves Inteligentes | Cerrajero en el Sur de Florida',
+    description:
+      'Expertos en programación de llaves inteligentes y reemplazo de mandos. Disponible 24/7 en los condados de Miami-Dade, Broward y Palm Beach.',
+    type: 'website',
+    url: 'https://onsitecarkey.com/es/services/smart-keys',
+    image: {
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
+      alt: 'Servicio profesional de programación de llaves inteligentes en el Sur de Florida',
+      width: 1200,
+      height: 630,
+    },
+    site_name: 'Onsite Car Key',
+    locale: 'es_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@onsitecarkey',
+    title: 'Servicios de Programación de Llaves Inteligentes en el Sur de Florida',
+    description: 'Programación profesional de llaves inteligentes y mandos. Repuestos de calidad OEM disponibles 24/7.',
+    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Servicios de Llaves Inteligentes"
+    title="Soluciones Expertas en Llaves Inteligentes"
+    subtitle="Programación y reemplazo profesional para todas las llaves inteligentes de vehículos modernos. Equipos de nivel de fábrica y piezas de calidad OEM para una compatibilidad perfecta."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Llamar al (954) 998-5887',
+        href: 'tel:9549985887',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/jeep-smart-key.jpg',
+      alt: 'Servicio de programación de llaves inteligentes en el sur de Florida',
+    }}
+  />
+
+  <Features2
+    title="Soluciones de Llaves Inteligentes"
+    subtitle="Servicios completos de llaves inteligentes y mandos a distancia para vehículos modernos"
+    columns={3}
+    items={[
+      {
+        title: 'Programación de Llaves Inteligentes',
+        description:
+          'Programación de nivel de fábrica para llaves de proximidad y mandos inteligentes. Compatible con las principales marcas: Toyota, Honda, Ford, GM, Chrysler/Dodge, etc.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Llaves de Botón de Encendido',
+        description:
+          'Reemplazo y programación experta para vehículos con botón de encendido. Pruebas completas y verificación de todas las funciones de la llave.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Reparación de Mandos',
+        description:
+          'Diagnóstico y reparación profesional de mandos de llaves inteligentes con mal funcionamiento. Cambio de batería y reparación de botones disponibles.',
+        icon: 'tabler:tool',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Calidad OEM',
+        description:
+          "Repuestos y programación con calidad de fabricante de equipo original. Asegura una compatibilidad perfecta con el sistema de seguridad de tu vehículo.",
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Equipo Avanzado',
+        description:
+          'Últimas herramientas de diagnóstico y programación para manejar los sistemas de seguridad de vehículos modernos.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Protección de Garantía',
+        description:
+          'Todos los servicios de llaves inteligentes están respaldados por nuestra garantía de satisfacción. Garantía completa sobre piezas y programación.',
+        icon: 'tabler:shield',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/couple-in-car-dealership.jpg',
+      alt: 'Equipo profesional de programación de llaves inteligentes',
+    }}
+  >
+    <Fragment slot="content"> Programación Profesional de Llaves Inteligentes </Fragment>
+  </Content>
+</Layout>

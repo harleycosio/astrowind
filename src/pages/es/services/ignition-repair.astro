@@ -1,0 +1,180 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Reparación y Reemplazo de Ignición de Auto | Onsite Car Key',
+  description:
+    'Servicios profesionales de reparación y reemplazo de ignición en el Sur de Florida. Técnicos expertos, servicio móvil y tarifas competitivas para todas las marcas y modelos.',
+  openGraph: {
+    title: 'Reparación y Reemplazo de Ignición | Sur de Florida',
+    description:
+      'Expertos en reparación de sistemas de encendido. Servicio móvil 24/7 en Miami-Dade, Broward y Palm Beach. Todas las marcas y modelos.',
+    type: 'website',
+    url: 'https://onsitecarkey.com/es/services/ignition-repair',
+    image: {
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
+      alt: 'Servicio profesional de reparación de ignición',
+    },
+    site_name: 'Onsite Car Key',
+    locale: 'es_US',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    id="features"
+    title="¿Por qué elegir nuestros servicios de ignición?"
+    subtitle="Soluciones expertas para todas las necesidades de encendido de tu vehículo"
+    columns={2}
+    items={[
+      {
+        title: 'Técnicos Expertos',
+        description: 'Nuestros técnicos certificados tienen la experiencia técnica para manejar todo tipo de problemas de ignición.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Equipo Avanzado',
+        description: 'Utilizamos herramientas y equipos de última generación para asegurar reparaciones precisas y eficientes.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Respuesta Rápida',
+        description: 'Ofrecemos tiempos de respuesta rápidos para que vuelvas a la carretera lo antes posible.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Precios Accesibles',
+        description: 'Tarifas competitivas sin cargos ocultos. Brindamos presupuestos claros antes de iniciar cualquier trabajo.',
+        icon: 'tabler:cash',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ignition-repair-job-chevy.png',
+      alt: 'Trabajo de reparación de ignición',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Servicios Integrales de Ignición',
+        description: 'Ofrecemos una gama completa de servicios, incluyendo reparación, reemplazo y extracción de llaves rotas.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Todas las Marcas y Modelos',
+        description:
+          'Nuestros servicios son compatibles con todas las marcas, incluyendo vehículos de lujo y sistemas de alta seguridad.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Servicio Móvil',
+        description: '¡Nosotros vamos a donde estés! Nuestro servicio móvil cubre todo el Sur de Florida y áreas cercanas.',
+        icon: 'tabler:truck',
+      },
+    ]}
+    image={{
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/c_thumb,w_200,g_face/v1739292820/pexels-nic-scrollstoppingphotos-28119421_llmtey.jpg',
+      alt: 'Imagen de servicio de ignición',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Servicios de Ignición</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="¿Qué dicen nuestros clientes?"
+    testimonials={[
+      {
+        testimonial: `Servicio rápido y profesional. Resolvieron mi problema de ignición en poco tiempo y a un precio razonable. ¡Muy recomendados!`,
+        name: 'Cary Kennedy',
+        job: 'Cliente Satisfecho',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Imagen de Cary Kennedy',
+        },
+      },
+      {
+        testimonial: `Recomiendo mucho a Onsite Car Key para cualquier problema con el encendido. Sus técnicos son expertos y muy amables.`,
+        name: 'Josh Wilkinson',
+        job: 'Cliente Feliz',
+        image: {
+          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Imagen de Josh Wilkinson',
+        },
+      },
+      {
+        testimonial:
+          '¡Excelente servicio! Cambiaron la ignición de mi auto de forma rápida y eficiente. Muy buen trato al cliente. Sin duda los volveré a llamar.',
+        name: 'Sidney Hansen',
+        job: 'Decorador',
+        image: {
+          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Imagen de Sidney Hansen',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas Frecuentes"
+    items={[
+      {
+        title: '¿Qué tipos de problemas de ignición reparan?',
+        description:
+          'Reparamos una gran variedad de fallas, incluyendo llaves rotas en el cilindro, cilindros de encendido desgastados y problemas eléctricos de arranque.',
+      },
+      {
+        title: '¿Ofrecen servicio móvil de reparación de ignición?',
+        description:
+          'Sí, ofrecemos servicio móvil en todo el Sur de Florida. Vamos directamente a donde se encuentra tu vehículo para realizar la reparación.',
+      },
+      {
+        title: '¿Cuánto tiempo toma la reparación?',
+        description:
+          'El tiempo depende de la falla específica. La mayoría de las reparaciones o reemplazos de ignición se completan en menos de una hora.',
+      },
+      {
+        title: '¿Cuál es el costo del servicio?',
+        description:
+          'El costo varía según el problema y el modelo de vehículo. Te daremos un presupuesto claro antes de comenzar cualquier trabajo.',
+      },
+      {
+        title: '¿Ofrecen garantía en sus servicios?',
+        description:
+          'Sí, todos nuestros trabajos de ignición cuentan con garantía de satisfacción. Contáctanos para más detalles sobre nuestra póliza.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contáctanos',
+        href: '/es/contact',
+        icon: 'tabler:phone',
+      },
+    ]}
+    title="¿Necesitas Reparación o Reemplazo de Ignición?"
+    subtitle="Contáctanos hoy para un servicio rápido, confiable y profesional en el Sur de Florida."
+  />
+</Layout>

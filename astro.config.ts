@@ -30,6 +30,14 @@ const whenExternalScripts = (
 export default defineConfig({
 	output: "static",
 
+	i18n: {
+		defaultLocale: "en",
+		locales: ["en", "es"],
+		routing: {
+			prefixDefaultLocale: false,
+		},
+	},
+
 	integrations: [
 		tailwind({
 			applyBaseStyles: false,

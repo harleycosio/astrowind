@@ -1,0 +1,252 @@
+---
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import Features3 from "~/components/widgets/Features3.astro";
+import HeroText from "~/components/widgets/HeroText.astro";
+import Prices from "~/components/widgets/Pricing.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Layout from "~/layouts/PageLayout.astro";
+
+const metadata = {
+	title: "Precios del Servicio de Apertura de Autos | Onsite Car Key",
+	description:
+		"Precios transparentes para servicios profesionales de apertura de autos. Servicio de emergencia 24/7 disponible con tarifas competitivas y tiempos de respuesta rápidos.",
+	openGraph: {
+		title:
+			"Servicio Profesional de Apertura de Autos con Herramientas Lishi en el Sur de Florida",
+		description:
+			"Apertura de autos rápida y sin daños. Precios transparentes, servicio de emergencia 24/7 y técnicos licenciados. Llama al (954) 998-5887 para asistencia inmediata.",
+		type: "service",
+		url: "https://onsitecarkey.com/es/services/car-unlocking",
+		image:
+			"https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image",
+	},
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Precios"
+    title="Tarifas Claras de Apertura de Autos"
+    subtitle="Servicios profesionales de cerrajería automotriz con precios claros y por adelantado. Sin cargos ocultos."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Tarifas de Servicio"
+    subtitle="Servicios profesionales de apertura de autos para cada situación"
+    prices={[
+      {
+        title: 'Servicio Estándar',
+        subtitle: 'Dentro de los límites de la ciudad',
+        price: 100,
+        period: 'Desde',
+        items: [
+          {
+            description: 'Disponible 7:00 AM - 8:00 PM',
+          },
+          {
+            description: 'Dentro de los límites locales',
+          },
+          {
+            description: 'Tiempo de respuesta rápido',
+          },
+          {
+            description: 'Herramientas profesionales',
+          },
+          {
+            description: 'Técnico licenciado',
+          },
+        ],
+        callToAction: {
+          target: '_self',
+          text: 'Llamar Ahora',
+          href: 'tel:9549985887',
+        },
+      },
+      {
+        title: 'Fuera de Horario',
+        subtitle: 'Servicio de Emergencia',
+        price: 150,
+        period: 'Desde',
+        items: [
+          {
+            description: 'Servicio de 8:00 PM - 6:59 AM',
+          },
+          {
+            description: 'Disponibilidad fines de semana',
+          },
+          {
+            description: 'Servicio en días festivos',
+          },
+          {
+            description: 'Respuesta prioritaria',
+          },
+          {
+            description: 'Disponibilidad 24/7',
+          },
+        ],
+        callToAction: {
+          target: '_self',
+          text: 'Servicio de Emergencia',
+          href: 'tel:9549985887',
+        },
+        hasRibbon: true,
+        ribbonTitle: '24/7',
+      },
+      {
+        title: 'Rango Extendido',
+        subtitle: 'Fuera de la ciudad',
+        price: '2/milla',
+        period: 'Desde',
+        items: [
+          {
+            description: 'A más de 30 millas de la base',
+          },
+          {
+            description: 'Condados circundantes',
+          },
+          {
+            description: 'Precio estándar + millaje',
+          },
+          {
+            description: 'Aplica recargo por distancia',
+          },
+          {
+            description: 'Llama para cotización exacta',
+          },
+        ],
+        callToAction: {
+          target: '_self',
+          text: 'Solicitar Presupuesto',
+          href: 'tel:9549985887',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="¿Por qué elegirnos?"
+    subtitle="Servicios de apertura de autos profesionales, confiables y con precios justos"
+    columns={2}
+    items={[
+      {
+        title: 'Disponibilidad 24/7',
+        description: 'Estamos disponibles las 24 horas para asistirte en cualquier situación de bloqueo.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Precios Transparentes',
+        description: 'Detalles de precios claros para cada plan, sin costos ocultos ni cargos inesperados.',
+        icon: 'tabler:flip-vertical',
+      },
+      {
+        title: 'Respuesta Rápida',
+        description: 'Nuestros técnicos llegan rápidamente para que vuelvas a la carretera lo antes posible.',
+        icon: 'tabler:truck',
+      },
+      {
+        title: 'Profesionales Licenciados',
+        description: 'Nuestro equipo está formado por cerrajeros licenciados y con amplia experiencia.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Ahorro en Llaves de Repuesto',
+        description:
+          'Ahorra hasta un 20% en una llave de repuesto al elegir nuestro servicio de apertura hoy.',
+        icon: 'tabler:key-off',
+      },
+      {
+        title: 'Obsequio con el Servicio',
+        description:
+          'Recibe un accesorio de cortesía con cada servicio de apertura. Nuestra forma de agradecer tu preferencia.',
+        icon: 'tabler:gift',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Pasos sencillos para volver a entrar"
+    tagline="proceso simplificado"
+    isReversed={true}
+    items={[
+      {
+        title: 'Llámanos',
+        description: 'Contáctanos al (954) 998-5887 para solicitar asistencia.',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Danos tu ubicación',
+        description: 'Dinos exactamente dónde estás para enviar a nuestro técnico más cercano.',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Obtén tu presupuesto',
+        description: 'Te daremos una tarifa clara y por adelantado sin sorpresas.',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Accede a tu auto',
+        description: 'Nuestro técnico llegará y abrirá tu auto de forma rápida y segura.',
+        icon: 'tabler:number-4',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/my-car-key-hero.jpg',
+      alt: 'Imagen de pasos',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas sobre Precios"
+    subtitle="Respuestas a las dudas más comunes sobre nuestras tarifas de apertura de autos."
+    columns={1}
+    items={[
+      {
+        title: '¿Qué significa "desde"?',
+        description:
+          'Nuestros precios base comienzan en el monto indicado y pueden variar según la ubicación, el tipo de vehículo y la complejidad. Siempre damos un presupuesto claro antes de empezar.',
+      },
+      {
+        title: '¿Cómo se calcula la tarifa de rango extendido?',
+        description:
+          'Para ubicaciones a más de 30 millas sumamos $2 por milla a la tarifa base (Estándar o Emergencia). Confirmaremos el costo total exacto cuando nos llames.',
+      },
+      {
+        title: '¿Hay cargos ocultos?',
+        description:
+          'No, creemos en la transparencia total. El presupuesto que te brindamos es el costo total final que pagarás.',
+      },
+      {
+        title: '¿Cuál es su política de cancelación?',
+        description:
+          'Puedes cancelar sin costo alguno si nos notificas al menos 15 minutos antes de la hora de llegada prevista. Cancelaciones posteriores pueden estar sujetas a un cargo de $50.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="¿Necesitas abrir tu auto?"
+    subtitle="Contáctanos ahora para un servicio rápido, seguro y confiable."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Llamar Ahora',
+        href: 'tel:9549985887',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>

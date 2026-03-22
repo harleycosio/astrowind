@@ -1,0 +1,85 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Servicio de Llaves Perdidas | Soluciones de Cerrajería Automotriz',
+  description:
+    'Soluciones profesionales cuando se pierden todas las llaves del auto. Reemplazo y programación experta de llaves en el Sur de Florida.',
+  openGraph: {
+    title: 'Servicio de Llaves Perdidas - Reemplazo Profesional de Llaves de Auto',
+    description: 'Soluciones expertas para vehículos con todas las llaves perdidas. Servicio rápido y profesional en el Sur de Florida.',
+    type: 'website',
+    url: 'https://onsitecarkey.com/es/services/all-keys-lost',
+    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_626,c_lfill,f_jpg/v1739763607/og_image',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+    <h1
+      class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading text-center text-gray-900 dark:text-white"
+    >
+      Llaves Perdidas: <span class="text-blue-600 dark:text-blue-400">Soluciones Profesionales</span>
+    </h1>
+
+    <div class="flex flex-col gap-8">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+        <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">¿Qué significa "Todas las llaves perdidas"?</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Esta situación se refiere a cuando el propietario de un vehículo ha perdido todas las llaves y mandos disponibles para su
+          vehículo, quedándose sin forma de abrir o arrancar su auto. Se considera más complejo que perder solo una llave de repuesto porque requiere un acceso profundo al sistema y una reprogramación completa.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-red-600">
+        <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">¿Por qué es diferente esta situación?</h2>
+        <ul class="list-none space-y-3">
+          {
+            [
+              'Requiere una reprogramación completa del sistema de llaves',
+              'Puede necesitar un reinicio de la computadora del vehículo',
+              'Suele ser más costoso que hacer un duplicado simple',
+              'Algunos modelos requieren programar dos llaves como mínimo',
+              'Exige herramientas de acceso y software profesional de cerrajería',
+            ].map((item) => (
+              <li class="flex items-center text-gray-700 dark:text-gray-300">
+                <span class="text-red-600 mr-2">⚠</span>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-yellow-600">
+        <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Consejos de Prevención</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Mantenga siempre una llave de repuesto en un lugar seguro y considere hacer duplicados antes de que ocurra una pérdida total. Esto le ahorrará tiempo y dinero significativos.
+        </p>
+        <div class="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
+          <p class="text-yellow-800 dark:text-yellow-200 text-sm">
+            💡 Consejo Pro: Recomendamos tener al menos dos llaves para vehículos modernos con sistemas de seguridad avanzados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '(954) 998-5887',
+        href: 'tel:9549985887',
+      },
+    ]}
+  >
+    <Fragment slot="title"> ¿Perdiste todas tus llaves? </Fragment>
+
+    <Fragment slot="subtitle">
+      No te preocupes, ¡estamos aquí para ayudarte! Nuestros técnicos profesionales pueden crear y programar nuevas llaves para tu vehículo en el lugar donde te encuentres.
+      Disponible 24/7 en el Sur de Florida y áreas circundantes.
+    </Fragment>
+  </CallToAction>
+</Layout>

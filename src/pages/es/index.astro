@@ -1,0 +1,186 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Note from '~/components/widgets/Note.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+const metadata = {
+  title: 'Reemplazo de Llaves de Auto y Servicios de Cerrajería en el Sur de Florida | Onsite Car Key',
+  description:
+    'Servicios profesionales de cerrajería automotriz en el sur de Florida. Reemplazo de llaves de auto de emergencia, asistencia en bloqueos y programación de llaves. Disponible 24/7 con tiempos de respuesta rápidos.',
+  ignoreTitleTemplate: true,
+  openGraph: {
+    title: 'Reemplazo de Llaves de Auto y Servicios de Cerrajería en el Sur de Florida | Onsite Car Key',
+    description:
+      'Servicios profesionales de cerrajería automotriz en el sur de Florida. Reemplazo de llaves de auto de emergencia, asistencia en bloqueos y programación de llaves. Disponible 24/7 con tiempos de respuesta rápidos.',
+    type: 'website',
+    url: 'https://onsitecarkey.com/es',
+    image: {
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/og_image_updated.png',
+      alt: 'Cerrajero en el Sur de Florida',
+      width: 1200,
+      height: 630,
+    },
+    site_name: 'Onsite Car Key',
+    locale: 'es_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@onsitecarkey',
+    title: 'Servicios de Cerrajería en el Sur de Florida',
+    description:
+      'Servicios profesionales de cerrajería automotriz en el sur de Florida. Reemplazo de llaves de auto de emergencia, asistencia en bloqueos y programación de llaves. Disponible 24/7.',
+    image: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/og_image_updated.png',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero2
+    actions={[
+      {
+        variant: 'primary',
+        text: '(954) 998-5887',
+        href: 'tel:9549985887',
+        target: '_self',
+        icon: 'tabler:phone',
+      },
+      { text: 'Nuestros Servicios', href: '/es/services', icon: 'tabler:arrow-right' },
+    ]}
+    image={{
+      src: '~/assets/images/hero-image.png',
+      fetchpriority: 'high',
+      alt: 'Servicio de llaves de auto de emergencia en el sur de Florida',
+    }}
+  >
+    <Fragment slot="title">
+      Servicios de<span class="text-accent dark:text-white highlight"> Llaves de Auto</span> de Emergencia en el Sur de Florida</Fragment
+    >
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">¿Perdiste las llaves de tu auto? ¿Te quedaste fuera? Te tenemos cubierto.</span> Servicios
+        profesionales de cerrajería automotriz con tiempos de respuesta rápidos y tarifas competitivas.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Servicios Móviles de Llaves</span> Sirviendo a los condados de
+      Miami-Dade, Broward y Palm Beach con corte experto de llaves, programación y asistencia de emergencia por bloqueo.
+    </Fragment>
+  </Hero2>
+
+  <Note />
+
+  <Steps
+    title="Pon tu auto en marcha en poco tiempo con nuestro servicio experto."
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Contacto y Ubicación</span>',
+        description:
+          "Llámanos al (954) 998-5887 y danos tu ubicación exacta - incluyendo calle, puntos de referencia cercanos o nombres de negocios. Por tu seguridad y un servicio más rápido, intenta estar en un área bien iluminada.",
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Información del Vehículo</span>',
+        description:
+          "Dinos la marca, modelo y año de tu vehículo. Esto nos ayuda a traer el equipo y las llaves correctas. Si es posible, revisa la calcomanía en la puerta del conductor.",
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Servicio y Verificación</span>',
+        description:
+          'Nuestro técnico licenciado llegará pronto, verificará tu identidad y propiedad del vehículo por seguridad. Luego diagnosticamos y resolvemos rápidamente tu problema de llaves.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: '¡Listo!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Pasos para el servicio',
+    }}
+  />
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Calidad de Servicio Premium',
+        description:
+          'Invertimos en equipos de programación de llaves de última generación y brindamos un servicio premium que cumple con las expectativas de clientes exigentes. Nuestros técnicos son profesionales certificados.',
+      },
+      {
+        title: 'Tiempo de Respuesta Rápido',
+        description:
+          'Entendemos que nuestros clientes valoran su tiempo, mantenemos un tiempo de respuesta promedio de 20 minutos en los condados de Miami-Dade, Broward y Palm Beach.',
+      },
+      {
+        title: 'Precios Transparentes',
+        description:
+          'Ofrecemos precios claros y directos sin cargos ocultos. Nuestro servicio refleja la calidad y confiabilidad que los clientes profesionales esperan, con facturación digital detallada.',
+      },
+      {
+        title: 'Cobertura Completa',
+        description:
+          'Especializados en vehículos de alta gama y sistemas de llaves sofisticados, incluyendo llaves inteligentes y funciones de seguridad avanzadas para vehículos modernos y de lujo.',
+      },
+    ]}
+    image={{
+      src: 'https://res.cloudinary.com/dx0dcvqlv/image/upload/c_scale,dpr_auto,w_auto/onsitekeyduplication_with_multiple_car_keys.WebP',
+      alt: 'Imagen de duplicación de llaves',
+    }}
+  >
+    <Fragment slot="content">Cerrajero confiable en el Sur de Florida.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <BlogLatestPosts
+    title="Perspectivas Expertas en Seguridad Automotriz"
+    information={`Explora nuestro blog para obtener consejos profesionales sobre seguridad del auto, reemplazo de llaves y servicios de cerrajería. 
+                Encuentra guías útiles, perspectivas de la industria y consejos de cerrajeros certificados sirviendo al Sur de Florida.`}
+  />
+
+  <FAQs
+    title="Preguntas Frecuentes"
+    subtitle="Preguntas comunes sobre nuestros servicios de cerrajería automotriz en el Sur de Florida"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Qué tan rápido pueden llegar a mi ubicación?',
+        description:
+          "Normalmente llegamos en 20-30 minutos en el área del Sur de Florida. Los tiempos de respuesta pueden variar según tu ubicación y la demanda actual. Te daremos un tiempo estimado cuando llames.",
+      },
+      {
+        title: '¿Qué formas de pago aceptan?',
+        description:
+          'Aceptamos tarjetas de crédito, efectivo y pagos digitales como Apple Pay y Google Pay. El pago se realiza al completar el servicio. Entregamos recibos detallados.',
+      },
+      {
+        title: '¿Hacen llaves para todas las marcas de autos?',
+        description:
+          'Sí, podemos hacer llaves para casi todas las marcas y modelos, tanto nacionales como extranjeros. Tenemos equipos modernos para llaves con transpondedor, controles remotos y llaves inteligentes.',
+      },
+      {
+        title: '¿Cuánto cuesta reemplazar una llave de auto?',
+        description:
+          "El costo varía según marca, modelo y año del vehículo. Las llaves básicas comienzan desde $140, mientras que llaves inteligentes pueden costar más. Te daremos una cotización exacta por teléfono.",
+      },
+      {
+        title: '¿Están licenciados y asegurados?',
+        description:
+          'Sí, estamos totalmente licenciados y asegurados en Florida. Nuestros técnicos están certificados profesionalmente para su tranquilidad.',
+      },
+      {
+        title: '¿Qué información necesito dar para el servicio?',
+        description:
+          "Necesitarás dar marca, modelo, año y tu ubicación. Para programar llaves, pediremos prueba de propiedad del vehículo e identificación válida por seguridad.",
+      },
+    ]}
+  />
+</Layout>

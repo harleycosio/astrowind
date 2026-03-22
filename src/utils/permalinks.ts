@@ -41,7 +41,7 @@ export const getCanonical = (path = ""): string | URL => {
 };
 
 /** */
-export const getPermalink = (slug = "", type = "page"): string => {
+export const getPermalink = (slug = "", type = "page", lang = ""): string => {
 	let permalink: string;
 
 	if (
@@ -56,11 +56,11 @@ export const getPermalink = (slug = "", type = "page"): string => {
 
 	switch (type) {
 		case "home":
-			permalink = getHomePermalink();
+			permalink = getHomePermalink(lang);
 			break;
 
 		case "blog":
-			permalink = getBlogPermalink();
+			permalink = getBlogPermalink(lang);
 			break;
 
 		case "asset":
@@ -85,14 +85,15 @@ export const getPermalink = (slug = "", type = "page"): string => {
 			break;
 	}
 
-	return definitivePermalink(permalink);
+	const localizedPermalink = lang && lang !== 'en' ? `/${lang}${permalink}` : permalink;
+	return definitivePermalink(localizedPermalink);
 };
 
 /** */
-export const getHomePermalink = (): string => getPermalink("/");
+export const getHomePermalink = (lang = ""): string => getPermalink("/", "page", lang);
 
 /** */
-export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
+export const getBlogPermalink = (lang = ""): string => getPermalink(BLOG_BASE, "page", lang);
 
 /** */
 export const getAsset = (path: string): string =>
